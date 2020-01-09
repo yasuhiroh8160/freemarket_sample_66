@@ -12,6 +12,8 @@
 
   <body>
 
+
+
     <header class= "header">
       <div class= "header__contents">
         <div class= "header__contents__top">
@@ -73,19 +75,134 @@
       </div>
     </header>
 
+
+
+
     <footer class= "footer">
-      <nav class= "footer-menu">
+      <nav class= "footer-top">
+        <div class= "footer-top__menu">
+          <div class= "footer-top__menu__first">
+            <ul>
+              <h2 class= "footer-head">メルカリについて</h2>
+              <li>
+                <a href= "/" >会社概要（運営会社）</a>
+              </li>
+              <li>
+                <a href= "/" >採用情報</a>
+              </li>
+              <li>
+                <a href= "/" >プレスリリース</a>
+              </li>
+              <li>
+                <a href= "/" >公式ブログ</a>
+              </li>
+              <li>
+                <a href= "/" >メルカリロゴ利用ガイドライン</a>
+              </li>
+              <li class="footer-social-link">
+                <a href= "/" ><i class="fab fa-twitter" ></i></a>
+              </li>
+              <li class="footer-social-link">
+                <a href= "/" ><i class="fab fa-facebook-square"></i></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class= "footer-top__menu__second">
+            <ul>
+              <h2 class= "footer-head">ヘルプ＆ガイド</h2>
+              <li>
+                <a href= "/" >ガイド</a>
+              </li>
+              <li>
+                <a href= "/" >らくらく便</a>
+              </li>
+              <li>
+                <a href= "/" >ゆうゆう便</a>
+              </li>
+              <li>
+                <a href= "/" >大型便</a>
+              </li>
+              <li>
+                <a href= "/" >車体取引ガイド</a>
+              </li>
+              <li>
+                <a href= "/" >あんしん・あんぜん宣言！</a>
+              </li>
+              <li>
+                <a href= "/" >偽ブランド品撲滅への取り組み</a>
+              </li>
+              <li>
+                <a href= "/" >ボックス</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class= "footer-top__menu__third">
+            <h2 class= "footer-head">プライバシーと利用規約</h2>
+            <div class= "footer-top__menu__third__lists">
+              <ul class= "left">
+                <li>
+                  <a href= "/" >プライバシーポリシー</a>
+                </li>
+                <li>
+                  <a href= "/" >利用規約</a>
+                </li>
+                <li>
+                  <a href= "/" >あんしんスマホサポート制度に関する利用特約</a>
+                </li>
+                
+                <li>
+                  <a href= "/" >コンプライアンスポリシー</a>
+                </li>
+              </ul>
+
+              <ul class= "right">
+                <li>
+                  <a href= "/" >個人データの安全管理に係る基本方針</a>
+                </li>
+                <li>
+                  <a href= "/" >特定商取引に関する表記</a>
+                </li>
+                <li>
+                  <a href= "/" >資金決済法に基づく基づく表示</a>
+                </li>
+                <li>
+                  <a href= "/" >法令順守と犯罪防止のために</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class= "footer-top__menu__fourth">
+            <ul>
+              <h2 class= "footer-head">国</h2>
+              <li>
+                <a href= "/" >日本</a>
+              </li>
+              <li>
+                <a href= "/" >United States</a>
+              </li>
+
+            </ul>
+          </div>
+          <ul>
+          </ul>
+        </div>
+        </div>
       </nav>
-      <div class= "footer-bottom">
+      <div class= "footer-row">
         <a href= "/" >
           <img src="https://web-jp-assets.mercdn.net/_next/static/images/logo-white-1a0696cf557ee1ed6f3c3444661d21ad.svg" widht="124" height="31">
         </a>
         <span class= "team-copyright">
-          <small>© Team_66a, Inc.</small>
+          <div class= "team-copyright__text">© Team_66a, Inc.</div>
         </span>
       </div>
-      
     </footer>
+
+
+
     <%= yield %>
   </body>
 </html>
