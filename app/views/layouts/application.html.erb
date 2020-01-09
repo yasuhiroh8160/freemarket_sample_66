@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FreemarketSample66</title>
+    <title>FreemarketSample66a</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   </head>
 
   <body>
+
+    <header class= "header">
+      <div class= "header__contents">
+        <div class= "header__contents__top">
+          <div class= "header__contents__top__title-image">
+            <a href= "/" >
+              <img src= "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2280950436"　width='134' height='36'>
+            </a>
+          </div>
+          <form action= "/" class= "header__contents__top__form">
+            <input type= "search" name= "keyword" value placeholder= "何かお探しですか？">
+              <button><i class="fas fa-search" height= "14" width= "14"></i></button>
+          </form>
+        </div>
+        <div class= "header__contents__row">
+          <nav class= "l-left">
+            <ul class= "searchs">
+              <li class= "searchs__category-search">
+                <a href= "/" >
+                  <i class="fas fa-list-ul"></i>
+                  <span>カテゴリーから探す</span>
+                </a>
+                
+
+        <%# ーーーーーカテゴリー選択の記述。未完成のためコメントアウト中ーーーーー %>
+                <%# <ul class= "category">
+                  <li class= "category__list">あ
+                    <ul class= "category-child">
+                      <li class= "category-child__list">い
+                        <ul class= "category-grandchild">
+                          <li class= "category-grandchild__list">う
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul> %>
+        <%# ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー %>
+
+
+              </li>
+              <li class= "searchs__brand_search">
+              <i class="fas fa-tag"></i>
+                <a href= "/" >ブランドから探す</a>
+              </li>
+            </ul>
+          </nav>
+          <div class= "l-right">
+            <ul class= "login-nav">
+              <li class= "login-nav__sign-up">
+                <a href= "/" >新規会員登録</a>
+              </li>
+              <li class= "login-nav__log-in">
+                <a href= "/">ログイン</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <footer class= "footer">
+      <nav class= "footer-menu">
+      </nav>
+      <div class= "footer-bottom">
+        <a href= "/" >
+          <img src="https://web-jp-assets.mercdn.net/_next/static/images/logo-white-1a0696cf557ee1ed6f3c3444661d21ad.svg" widht="124" height="31">
+        </a>
+        <span class= "team-copyright">
+          <small>© Team_66a, Inc.</small>
+        </span>
+      </div>
+      
+    </footer>
     <%= yield %>
   </body>
 </html>
