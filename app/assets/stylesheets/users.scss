@@ -1,0 +1,240 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./setting";
+@import "./clearfix";
+
+body {
+  background-color: $lightgray;
+  border-style: solid;
+  position: relative;
+}
+
+.single-header {
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    width: 16%;
+    height: 49px;
+    padding-right: 10px;
+  }
+  nav {
+    color: gray;
+    width: 60%;
+    height: 49px;
+    ol {
+      list-style: none;
+      display: flex;
+      text-align: center;
+      margin: 0 10px;
+      position: relative;
+      .procedure_one {
+        font-size: 12px;
+        width: 20%;
+        position: relative;
+        .progress-status {
+          background-color: $red;
+          width: 12px;
+          height: 12px;
+          margin:  8px auto 0;
+          border-radius: 50%;
+        }
+        &::after {
+          bottom: 5px;
+          content: '';
+          width: 50%;
+          height: 2px;
+          background: $red;
+          position: absolute;
+          right: 0;
+        }
+      }
+      .procedure_two {
+        font-size: 12px;
+        width: 20%;
+        position: relative;
+        .progress-status {
+          background-color: $gray;
+          width: 12px;
+          height: 12px;
+          margin:  8px auto 0;
+          border-radius: 50%;
+        }
+        &::before {
+          bottom: 5px;
+          content: '';
+          width: 50%;
+          height: 2px;
+          background: $gray;
+          position: absolute;
+          left: 0;
+        }
+        &::after {
+          bottom: 5px;
+          content: '';
+          width: 50%;
+          height: 2px;
+          background: $gray;
+          position: absolute;
+          right: 0;
+        }
+      }
+      .procedure_three {
+        font-size: 12px;
+        width: 20%;
+        position: relative;
+        .progress-status {
+          background-color: $gray;
+          width: 12px;
+          height: 12px;
+          margin:  8px auto 0;
+          border-radius: 50%;
+        }
+        &::before {
+          bottom: 5px;
+          content: '';
+          width: 50%;
+          height: 2px;
+          background: $gray;
+          position: absolute;
+          left: 0;
+        }
+        &::after {
+          bottom: 5px;
+          content: '';
+          width: 50%;
+          height: 2px;
+          background: $gray;
+          position: absolute;
+          right: 0;
+        }
+      }
+      .procedure_four {
+        font-size: 12px;
+        width: 20%;
+        position: relative;
+        .progress-status {
+          background-color: $gray;
+          width: 12px;
+          height: 12px;
+          margin:  8px auto 0;
+          border-radius: 50%;
+        }
+        &::before {
+          bottom: 5px;
+          content: '';
+          width: 50%;
+          height: 2px;
+          background: $gray;
+          position: absolute;
+          left: 0;
+        }
+        &::after {
+          bottom: 5px;
+          content: '';
+          width: 50%;
+          height: 2px;
+          background: $gray;
+          position: absolute;
+          right: 0;
+        }
+      }
+      .procedure_five {
+        font-size: 12px;
+        width: 20%;
+        position: relative;
+        .progress-status {
+          background-color: $gray;
+          width: 12px;
+          height: 12px;
+          margin:  8px auto 0;
+          border-radius: 50%;
+        }
+        &::before {
+          bottom: 5px;
+          content: '';
+          width: 50%;
+          height: 2px;
+          background: $gray;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+main {
+  background-color: $white;
+  width: 75%;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  h2 {
+    background-color: yellow;
+    text-align: center;
+    font-size: 22px;
+    padding: 32px;
+  }
+  form {
+    div {
+      width: 75%;
+      margin: 0 auto;
+      .form-group {
+        text-align: center;
+        width: inherit;
+        label {
+          font-weight: 600;
+        }
+        span {
+          background-color: #ea352d;
+          margin: 0 0 0 8px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: top;
+        }
+        input {
+          height: 48px;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    } 
+  }
+}
+
+.single-footer {
+  height: 150px;
+  width: 45%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  nav {
+    padding-bottom: 30px;
+    ul {
+      display: flex;
+      li {
+        font-size: 12px;
+        width: 33%;
+        a {
+          color: $footer-black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  p {
+    padding-top: 8px;
+  }
+}
