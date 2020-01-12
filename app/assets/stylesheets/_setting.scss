@@ -7,6 +7,10 @@ $lightblue: #0099ee;
 $white: #fff;
 $shadow: rgba(0, 0, 0, 0.185);
 
+$prace-shadow: rgba(0, 0, 0, 0.4);
+$gradation: 90deg,hsla(0,0%,100%,0),#fff 72%;
+
+
 $footer-black: rgb(31, 31, 31,);
 
 a{
@@ -19,4 +23,8 @@ li{
 
 div {
   display: block;
+}
+
+body{
+  background-color: $lightgray;
 }
