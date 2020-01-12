@@ -72,3 +72,4 @@ group :production do
 end
 
 gem 'aws-sdk-s3'
+gem "haml-rails"
