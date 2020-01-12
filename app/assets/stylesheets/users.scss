@@ -16,166 +16,397 @@ body {
   }
 }
 
-.single-header {
+.single-header-one {
+  width: 100%;
   height: 128px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  h1 {
-    width: 16%;
-    height: 49px;
-    padding-right: 10px;
-  }
-  nav {
-    color: gray;
-    width: 60%;
-    height: 49px;
-    ol {
-      list-style: none;
-      display: flex;
-      text-align: center;
-      margin: 0 10px;
+  
+  .header-min {
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 700px;
+    // min-width: 672px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      width: 30%;
+      padding-right: 20px;
+    }
+    nav {
+      color: gray;
+      width: 70%;
+      padding-bottom: 30px;
       position: relative;
-      .procedure_one {
-        font-size: 12px;
-        width: 20%;
-        position: relative;
-        .progress-status {
-          background-color: $red;
-          width: 12px;
-          height: 12px;
-          margin:  8px auto 0;
-          border-radius: 50%;
+      margin-right: -45px;
+      ol {
+        right: 0;
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        margin: 0 10px;
+        // position: absolute;
+        .procedure_one {
+          color: $red;
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
         }
-        &::after {
-          bottom: 5px;
-          content: '';
-          width: 50%;
-          height: 2px;
-          background: $red;
-          position: absolute;
-          right: 0;
+        .procedure_two {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
         }
-      }
-      .procedure_two {
-        font-size: 12px;
-        width: 20%;
-        position: relative;
-        .progress-status {
-          background-color: $gray;
-          width: 12px;
-          height: 12px;
-          margin:  8px auto 0;
-          border-radius: 50%;
+        .procedure_three {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
         }
-        &::before {
-          bottom: 5px;
-          content: '';
-          width: 50%;
-          height: 2px;
-          background: $gray;
-          position: absolute;
-          left: 0;
+        .procedure_four {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
         }
-        &::after {
-          bottom: 5px;
-          content: '';
-          width: 50%;
-          height: 2px;
-          background: $gray;
-          position: absolute;
-          right: 0;
-        }
-      }
-      .procedure_three {
-        font-size: 12px;
-        width: 20%;
-        position: relative;
-        .progress-status {
-          background-color: $gray;
-          width: 12px;
-          height: 12px;
-          margin:  8px auto 0;
-          border-radius: 50%;
-        }
-        &::before {
-          bottom: 5px;
-          content: '';
-          width: 50%;
-          height: 2px;
-          background: $gray;
-          position: absolute;
-          left: 0;
-        }
-        &::after {
-          bottom: 5px;
-          content: '';
-          width: 50%;
-          height: 2px;
-          background: $gray;
-          position: absolute;
-          right: 0;
-        }
-      }
-      .procedure_four {
-        font-size: 12px;
-        width: 20%;
-        position: relative;
-        .progress-status {
-          background-color: $gray;
-          width: 12px;
-          height: 12px;
-          margin:  8px auto 0;
-          border-radius: 50%;
-        }
-        &::before {
-          bottom: 5px;
-          content: '';
-          width: 50%;
-          height: 2px;
-          background: $gray;
-          position: absolute;
-          left: 0;
-        }
-        &::after {
-          bottom: 5px;
-          content: '';
-          width: 50%;
-          height: 2px;
-          background: $gray;
-          position: absolute;
-          right: 0;
-        }
-      }
-      .procedure_five {
-        font-size: 12px;
-        width: 20%;
-        position: relative;
-        .progress-status {
-          background-color: $gray;
-          width: 12px;
-          height: 12px;
-          margin:  8px auto 0;
-          border-radius: 50%;
-        }
-        &::before {
-          bottom: 5px;
-          content: '';
-          width: 50%;
-          height: 2px;
-          background: $gray;
-          position: absolute;
-          left: 0;
+        .procedure_five {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
         }
       }
     }
   }
 }
 
+.single-header-two {
+  width: 100%;
+  height: 128px;
+  
+  .header-min {
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 700px;
+    // min-width: 672px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      width: 30%;
+      padding-right: 20px;
+    }
+    nav {
+      color: gray;
+      width: 70%;
+      padding-bottom: 30px;
+      position: relative;
+      margin-right: -45px;
+      ol {
+        right: 0;
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        margin: 0 10px;
+        // position: absolute;
+        .procedure_one {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_two {
+          color: $red;
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_three {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_four {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_five {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
 
-main {
+.single-footer {
+  height: 150px;
+  width: 456px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  nav {
+    padding-bottom: 30px;
+    ul {
+      display: flex;
+      li {
+        font-size: 12px;
+        width: 33%;
+        a {
+          color: $footer-black;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  p {
+    padding-top: 8px;
+  }
+}
+
+
+// 1ページ目
+.page-one {
   background-color: $white;
-  width: 75%;
+  width: 700px;
+
   margin: 0 auto;
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   h2 {
@@ -306,28 +537,66 @@ main {
   }
 }
 
-
-.single-footer {
-  height: 150px;
-  width: 45%;
-  text-align: center;
+// ２ページ目
+.page-two {
+  width: 672px;
+  background-color: $white;
   margin: 0 auto;
-  padding: 40px 0;
-  nav {
-    padding-bottom: 30px;
-    ul {
-      display: flex;
-      li {
-        font-size: 12px;
-        width: 33%;
-        a {
-          color: $footer-black;
-          text-decoration: none;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    padding: 32px;
+    border-bottom: solid 1px $lightgray;
+  }
+  form {
+    padding: 40px 40px 64px;
+    .contents {
+      width: 343px;
+      margin: 0 auto;
+      .form-content {
+        position: relative;
+        .label-default {
+          display: block;
+        }
+        .input-default {
+          height: 28px;
+          width: 100%;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          font-size: 16px;
+          display: block;
         }
       }
+      p {
+        font-size: 15px;
+        margin: 8px 0 0;
+        width: 377px;
+      }
+      button {
+        display: block;
+        width: 377px;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        background-color: $red;
+        border: 1px solid $red;
+        color: $white;
+        margin-top: 30px;
+      }
+      a {
+        font-size: 15px;
+        float: right;
+        display: block;
+        padding-top: 10px;
+        margin-right: -30px;
+      }
     }
-  }
-  p {
-    padding-top: 8px;
   }
 }
