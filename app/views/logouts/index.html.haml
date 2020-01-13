@@ -1,0 +1,26 @@
+.nav-bread
+  .nav-bread__nav-box
+    %ul
+      %li<>
+        メルカリ
+      %li.arrow<>
+        >
+      %li<>
+        = link_to 'マイページ', '＃', class: "editlink"
+      %li.arrow<>
+        >
+      %li.logout<>
+        ログアウト
+
+
+.main-background
+  .main-contents
+    = render partial: 'layouts/left-menu'
+    
+
+
+    .main-contents__right-box
+      .main-contents__right-box__right-inner
+        .main-contents__right-box__right-inner__right-logout
+          = link_to "#", class: "link-logout" do
+            ログアウト
