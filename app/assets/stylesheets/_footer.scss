@@ -1,0 +1,121 @@
+.footer{
+  height: 387px;
+  padding: 0 20px 10px;
+  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+  background-color: $footer-black;
+  color: $white;
+
+  .footer-top{
+    height: 298px;
+    width: 1020px;
+    margin: 0 auto;
+
+    &__menu{
+      display: flex;
+
+      &__first{
+        margin-top: 18px;
+        width: 20%;
+        padding-right: 20px;
+      }
+
+      &__second{
+        width: 23%;
+        margin-top: 18px;
+        padding-right: 40px;
+      }
+
+      &__third{
+        margin-top: 18px;
+        width: 42%;
+        padding-right: 40px;
+
+        &__lists{
+          display: flex;
+
+          .left{
+            width: 50%;
+            padding-right: 10px;
+          }
+          .right{
+            width: 50%;
+            padding-left: 10px;
+          }
+
+        }
+      }
+
+      &__fourth{
+        width: 15%;
+        margin-top: 18px;
+      }
+      
+
+
+          .footer-head{
+            display: block;
+            font-size: 16px;
+          }
+
+          li{
+            margin-top: 16px;
+            opacity: 0.7;
+          }
+
+          a{
+            color: $white;
+            font-size: 12px;
+            line-height: 1.4em;
+            display: block;
+          }
+
+          a:hover{
+            text-decoration-line: underline;
+          }
+
+          .footer-social-link{
+            position: relative;
+            opacity: 1;
+            height: 44px;
+            width: 46px;
+            display: inline-flex;
+            align-items: flex-end;
+
+            a{
+              font-size: 30px;
+              line-height: 0px;
+            }
+          }
+
+
+
+    }
+  }
+
+  .footer-row{
+    position: relative;
+    width: 1020px;
+    font-size: 12px;
+    margin: 30px auto 20px;
+
+    a{
+      display: inline-block;
+      height: 31px;
+      margin-right: 10px;
+    }
+
+    .team-copyright{
+      position: absolute;
+      display: inline-block;
+      height:31px;
+      width: 745px;
+      text-align: center;
+
+      &__text{
+        display: inline-block;
+        height: 31px;
+        line-height: 31px;
+      }
+    }
+  }
+}
