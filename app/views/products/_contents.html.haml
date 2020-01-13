@@ -1,0 +1,120 @@
+.popular
+  %h2 人気のカテゴリー
+  .popular__lists
+    %ul
+      %li
+        %a{href: "/"}レディース
+      %li
+        %a{href: "/"} メンズ
+      %li
+        %a{href: "/"} 家電・スマホ・カメラ
+      %li
+        %a{href: "/"} おもちゃ・ホビー・グッズ
+
+
+.main-contents
+  .main-contents__lists
+    .main-contents__lists__head
+      %h3 レディース新着アイテム
+      %a{href: "/"}
+        もっと見る
+        %i.fas.fa-chevron-right
+    .main-contents__lists__bodys
+      .main-contents__lists__bodys__body
+        %ul.items
+          =render partial: "products/items"
+  
+  .main-contents__lists
+    .main-contents__lists__head
+      %h3 メンズ新着アイテム
+      %a{href: "/"}
+        もっと見る
+        %i.fas.fa-chevron-right
+    .main-contents__lists__bodys
+      .main-contents__lists__bodys__body
+        %ul.items
+          =render partial: "products/items"
+
+  .main-contents__lists
+    .main-contents__lists__head
+      %h3 家電・スマホ・カメラ新着アイテム
+      %a{href: "/"}
+        もっと見る
+        %i.fas.fa-chevron-right
+    .main-contents__lists__bodys
+      .main-contents__lists__bodys__body
+        %ul.items
+          =render partial: "products/items"
+
+  .main-contents__lists
+    .main-contents__lists__head
+      %h3 おもちゃ・ホビー・グッズ新着アイテム
+      %a{href: "/"}
+        もっと見る
+        %i.fas.fa-chevron-right
+    .main-contents__lists__bodys
+      .main-contents__lists__bodys__body
+        %ul.items
+          =render partial: "products/items"
+
+
+.popular
+  %h2 人気のブランド
+  .popular__lists
+    %ul
+      %li
+        %a{href: "/"} シャネル
+      %li
+        %a{href: "/"} ルイヴィトン
+      %li
+        %a{href: "/"} シュプリーム
+      %li
+        %a{href: "/"} ナイキ
+
+.main-contents
+  .main-contents__lists
+    .main-contents__lists__head
+      %h3 シャネル
+      %a{href: "/"}
+        もっと見る
+        %i.fas.fa-chevron-right
+    .main-contents__lists__bodys
+      .main-contents__lists__bodys__body
+        %ul.items
+          =render partial: "products/items"
+
+  .main-contents__lists
+    .main-contents__lists__head
+      %h3 ルイヴィトン
+      %a{href: "/"}
+        もっと見る
+        %i.fas.fa-chevron-right
+    .main-contents__lists__bodys
+      .main-contents__lists__bodys__body
+        %ul.items
+          =render partial: "products/items"
+
+    .main-contents__lists
+      .main-contents__lists__head
+        %h3 シュプリーム
+        %a{href: "/"}
+          もっと見る
+          %i.fas.fa-chevron-right
+      .main-contents__lists__bodys
+        .main-contents__lists__bodys__body
+          %ul.items
+            =render partial: "products/items"
+
+      .main-contents__lists
+        .main-contents__lists__head
+          %h3 ナイキ
+          %a{href: "/"}
+            もっと見る
+            %i.fas.fa-chevron-right
+        .main-contents__lists__bodys
+          .main-contents__lists__bodys__body
+            %ul.items
+              =render partial: "products/items"
+
+            
+

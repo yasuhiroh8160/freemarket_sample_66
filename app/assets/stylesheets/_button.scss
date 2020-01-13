@@ -1,0 +1,23 @@
+
+.exhibition-button{
+  background-color: $red;
+  height: 160px;
+  width: 160px;
+  bottom: 32px;
+  right: 32px;
+  display: block;
+  border-radius: 50%;
+  z-index: 100;
+  position: fixed;
+  color: $white;
+  text-align: center;
+  &__btn{
+    margin-top: 26px;
+    font-size: 22px;
+  }
+  i{
+    font-size: 65px;
+  }
+
+}
+
