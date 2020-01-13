@@ -376,6 +376,546 @@ body {
   }
 }
 
+.single-header-three {
+  width: 100%;
+  height: 128px;
+  
+  .header-min {
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 700px;
+    // min-width: 672px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      width: 30%;
+      padding-right: 20px;
+    }
+    nav {
+      color: gray;
+      width: 70%;
+      padding-bottom: 30px;
+      position: relative;
+      margin-right: -45px;
+      ol {
+        right: 0;
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        margin: 0 10px;
+        // position: absolute;
+        .procedure_one {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_two {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_three {
+          color: $red;
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_four {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_five {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.single-header-four {
+  width: 100%;
+  height: 128px;
+  
+  .header-min {
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 700px;
+    // min-width: 672px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      width: 30%;
+      padding-right: 20px;
+    }
+    nav {
+      color: gray;
+      width: 70%;
+      padding-bottom: 30px;
+      position: relative;
+      margin-right: -45px;
+      ol {
+        right: 0;
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        margin: 0 10px;
+        // position: absolute;
+        .procedure_one {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_two {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_three {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_four {
+          color: $red;
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_five {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $gray;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $gray;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.single-header-five {
+  width: 100%;
+  height: 128px;
+  
+  .header-min {
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 700px;
+    // min-width: 672px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      width: 30%;
+      padding-right: 20px;
+    }
+    nav {
+      color: gray;
+      width: 70%;
+      padding-bottom: 30px;
+      position: relative;
+      margin-right: -45px;
+      ol {
+        right: 0;
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        margin: 0 10px;
+        // position: absolute;
+        .procedure_one {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_two {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_three {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_four {
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+            z-index: 1000;
+            position: absolute;
+            left: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+          &::after {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            right: 0;
+          }
+        }
+        .procedure_five {
+          color: $red;
+          font-size: 12px;
+          width: 20%;
+          position: relative;
+          .progress-status {
+            background-color: $red;
+            width: 12px;
+            height: 12px;
+            margin:  8px auto 0;
+            border-radius: 50%;
+          }
+          &::before {
+            bottom: 5px;
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: $red;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 .single-footer {
   height: 150px;
   width: 456px;
@@ -598,5 +1138,203 @@ body {
         margin-right: -30px;
       }
     }
+  }
+}
+
+// 3ページ目
+.page-three {
+  width: 672px;
+  background-color: $white;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    padding: 32px;
+    border-bottom: solid 1px $lightgray;
+  }
+  form {
+    padding: 40px 40px 64px;
+    .contents {
+      width: 343px;
+      margin: 0 auto;
+      .form-content {
+        margin-bottom: 30px;
+        span {
+          background-color: $red;
+          margin: 0 5px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: top;
+        }
+        .any {
+          background-color: $gray;
+        }
+        input {
+          height: 30px;
+          width: 100%;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+          display: block;
+          margin: 8px auto;
+        }
+        select {
+          height: 45px;
+          width: 377px;
+          margin: 8px auto;
+          display: flex;
+          align-items: center;
+        }
+      }
+      button {
+        display: block;
+        width: 377px;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        background-color: $red;
+        border: 1px solid $red;
+        color: $white;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+// 4ページ目
+.page-four {
+  width: 672px;
+  background-color: $white;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    padding: 32px;
+    border-bottom: solid 1px $lightgray;
+  }
+  form {
+    padding: 40px 40px 64px;
+    .contents {
+      width: 343px;
+      margin: 0 auto;
+      .form-content {
+        margin-bottom: 30px;
+        span {
+          background-color: $red;
+          margin: 0 5px;
+          padding: 2px 4px;
+          border-radius: 2px;
+          color: #fff;
+          font-size: 12px;
+          vertical-align: top;
+        }
+        input {
+          height: 30px;
+          width: 100%;
+          padding: 10px 16px 8px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background: #fff;
+          line-height: 1.5;
+          font-size: 16px;
+          display: block;
+          margin: 8px auto;
+        }
+        select {
+          height: 45px;
+          width: 377px;
+          margin: 8px auto;
+          display: flex;
+          align-items: center;
+        }
+        a {
+          font-size: 15px;
+          float: right;
+          display: block;
+          margin-right: -35px;
+        }
+        ul {
+          display: flex;
+        }
+        .credit-card {
+          display: flex;
+          span {
+            background-color: initial;
+            color: $black;
+            font-size: 15px;
+            margin-top: 17px;
+          }
+        }
+      }
+      button {
+        display: block;
+        width: 377px;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        background-color: $red;
+        border: 1px solid $red;
+        color: $white;
+        margin-top: 60px;
+      }
+    }
+  }
+
+}
+
+// 5ページ目
+.page-five {
+  width: 672px;
+  background-color: $white;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    padding: 32px;
+    border-bottom: solid 1px $lightgray;
+  }
+  form {
+    padding: 40px 40px 64px;
+    .contents {
+      width: 343px;
+      margin: 0 auto;
+      p {
+        text-align: center;
+      }
+      button {
+        display: block;
+        width: 377px;
+        line-height: 48px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        -webkit-transition: all ease-out .3s;
+        transition: all ease-out .3s;
+        cursor: pointer;
+        text-align: center;
+        background-color: $red;
+        border: 1px solid $red;
+        color: $white;
+        margin-top: 60px;
+      }
+    }
+  }
+  .banner:hover img{
+    opacity: 0.6;
   }
 }
