@@ -1,4 +1,6 @@
 class TestsController < ApplicationController
+  #画像テスト用
+
   def index
     @tests = Test.all
   end
