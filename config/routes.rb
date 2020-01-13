@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :tests, only: [:index, :new, :create]
   get '/tmp', to: 'tmps#index'
   get '/mypage', to: 'mypages#index'
+  get '/logout', to: 'logouts#index'
 end
