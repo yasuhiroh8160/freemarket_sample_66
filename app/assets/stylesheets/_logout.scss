@@ -4,12 +4,12 @@
   font-size: 14px;
   width: 100%;
   height: 49px;
-  // box-shadow: 0 3px 2px -2px gray;
   box-shadow: 0px 1px 5px #999;
   position:absolute; 
-  top:0; 
+  top: 1; 
   left:0; 
-  z-index: 3;
+  background-color: #ffffff;
+  z-index: 20;
   &__nav-box{
     margin: 0 210px;
     padding: 16px 0;
@@ -40,7 +40,7 @@
   background-color: #f5f5f5;
   margin:1px;
   width:100%;
-  height: calc(1950px - 49px);
+  height: calc(1950px - 49px -640px);
   margin-top: 49px;
   .main-contents{
     width: 1020px;
