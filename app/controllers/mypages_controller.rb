@@ -4,4 +4,7 @@ class MypagesController < ApplicationController
 
   def identification
   end
+
+  def profile
+  end
 end
