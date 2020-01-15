@@ -1,2 +1,273 @@
-%h1
-  mypage
+=render partial: "layouts/header"
+
+
+.mypage-nav
+  .mypage-nav__nav-box
+    %ul
+      %li
+        %a{href: "/mypage"}
+          メルカリ
+      %li.arrow
+        >
+      %li.current-page
+        マイページ
+
+.mypage-background
+  .mypage-contents
+    .mypage-contents__left-menu
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side mypage" do
+          %span
+            マイページ
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            お知らせ
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            やることリスト
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            いいね！一覧
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            出品する
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            出品した商品-出品中
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            出品した商品-取引中
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            出品した商品-売却済み
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            購入した商品-取引中
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            購入した商品-過去の取引
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            ニュース一覧
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            評価一覧
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            ガイド
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            お問い合わせ
+          %span.right-arror
+            >
+
+      .mypage-contents__left-menu__menu-title
+        メルペイ
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            売上・振込申請
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            ポイント
+          %span.right-arror
+            >
+
+      .mypage-contents__left-menu__menu-title
+        設定
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            プロフィール
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            発送元・お届け先住所変更
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            支払い方法
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            メール/パスワード
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            本人情報
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            電話番号の確認
+          %span.right-arror
+            >
+      .mypage-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            ログアウト
+          %span.right-arror
+            >
+    
+    .mypage-contents__right-menu
+      .mypage-contents__right-menu__user-icon
+        %a.information{href: "/mypage"}
+          %img{height: "60", width: "60", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsbPo7e-3mJmSToduD9rn2jQKOePe2TOCqyfGndSJeDuR39rbOyQ&s"}
+          %h2 テストユーザー
+          .mypage-number
+            .mypage-number__left-number
+              評価
+              %span 0
+            .mypage-number__right-number
+              出品数
+              %span 0
+
+      .mypage-contents__right-menu__top-container
+        .mypage-top-tab
+          %ul
+            %li
+              %a.menu.select{href: "#tab_1"}
+                %h3 お知らせ
+            %li
+              %a.menu{href: "#tab_2"}
+                %h3 やることリスト
+        .mypage-top-notification#tab_1.current
+          %ul
+            %li
+              %a{href: "/mypage"}
+                %img{height: "48", width: "48", src: "https://iconbu.com/wp-content/uploads/2019/09/01-12.png"}/
+                
+                .notification-body
+                  .notification-text
+                    《この通知を受け取ったあなた限定》¥1,000の商品を「実質1円」でご購入いただけます！
+                  .time
+                    %i.far.fa-clock
+                    %span ９時間前
+                .right-arrow    
+                  %i.fas.fa-chevron-right
+
+            %li
+              %a{href: "/mypage"}
+                %img{height: "48", width: "48", src: "https://iconbu.com/wp-content/uploads/2019/09/01-12.png"}/
+                
+                .notification-body
+                  .notification-text
+                    《この通知を受け取ったあなた限定》¥1,000の商品を「実質1円」でご購入いただけます！
+                  .time
+                    %i.far.fa-clock
+                    %span 16時間前
+                .right-arrow    
+                  %i.fas.fa-chevron-right
+
+            %li
+              %a{href: "/mypage"}
+                %img{height: "48", width: "48", src: "https://iconbu.com/wp-content/uploads/2019/09/01-12.png"}/
+                
+                .notification-body
+                  .notification-text
+                    《この通知を受け取ったあなた限定》¥1,000の商品を「実質1円」でご購入いただけます！
+                  .time
+                    %i.far.fa-clock
+                    %span 2日前
+                .right-arrow    
+                  %i.fas.fa-chevron-right
+
+
+            %li.mypage-go-list
+              %a{href: "/mypage"} 一覧へ戻る
+
+
+        .mypage-top-notification#tab_2
+          %ul
+            %li
+              %a{href: "/mypage"}
+                %img{height: "48", width: "48", src: "https://iconbu.com/wp-content/uploads/2019/09/01-12.png"}/
+                
+                .notification-body
+                  .notification-text
+                    ご登録のメールアドレスに認証メールを送りました。メールに記載のURLをクリックして、メールアドレスを認証してください。
+                  .time
+                    %i.far.fa-clock
+                    %span ９時間前
+                .right-arrow    
+                  %i.fas.fa-chevron-right
+
+            %li.mypage-go-list
+              %a{href: "/mypage"} 一覧へ戻る
+
+
+      .mypage-contents__right-menu__bottom-container
+        %h2 購入した商品
+        .mypage-bottom-tab
+          %ul
+            %li
+              %a.tab.active{href: "#tab_3"}
+                %h3 取引中
+            %li
+              %a.tab{href: "#tab_4"}
+                %h3 過去の取引
+        .mypage-bottom-panel
+          .not-found#tab_3.show
+            .not-text-logo
+            %span 取引中の商品がありません
+
+          .not-found#tab_4
+            .not-text-logo
+            %span 過去の取引はありません
+
+
+
+=render partial: "layouts/banner-bottom"
+=render partial: "layouts/footer"
+

@@ -1,0 +1,340 @@
+.mypage-nav{
+  color: #333;
+  font-family: 'Source Sans Pro', Helvetica , Arial,  'YuGothic',  'Meiryo', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  height: 49px;
+  background-color: $white;
+  box-shadow: 0px 1px 5px $shadow;
+  position:absolute; 
+  top:100px; 
+  left:0; 
+  z-index: 2;
+  &__nav-box{
+    width: 1020px;
+    margin: 0 auto;
+    padding: 16px 0;
+    ul{
+      display:flex;
+      list-style: none;
+      li{
+        a{
+          color: $black;
+        }
+        a:hover{
+          text-decoration: underline;
+          opacity: 0.8;
+        }
+      }
+      li.arrow{
+        font-size: 12px;
+        margin: 0 8px;
+        padding-top: 3px;
+      }
+      li.current-page{
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.mypage-background{
+  font-family: 'Source Sans Pro', Helvetica , Arial,  'YuGothic',  'Meiryo', sans-serif;
+  background-color: #f5f5f5;
+  margin:1px;
+  width:100%;
+  height: 100%;
+  .mypage-contents{
+    width: 1020px;
+    height: 100%;
+    margin: 49px auto 0;
+    padding: 40px 0 ;
+    color: $black;
+    display: flex;
+    justify-content: space-between;
+
+    //ここから左のメニュー
+    &__left-menu{
+      width: 280px;
+      &__menu-each{
+        min-height:48px;
+        background-color: #ffffff;
+        padding:16px;
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 14px;
+        text-decoration: none;
+        position: relative;
+        z-index: 1; 
+        a.side {
+          text-decoration: none;
+          color: #333;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding:16px;
+          z-index: 4;
+          span.right-arror{
+            color:rgb(202, 199, 199);
+            float: right;
+            font-weight: bold;
+            font-size:16px;
+            padding: auto 0;
+            margin-right:6px;
+          }
+        }
+        a.side:hover{
+          background-color:#fafafa;
+          span.right-arror{
+            color:#333;
+            float: right;
+            font-weight: bold;
+            font-size:19px;
+            opacity: 1;
+            align-items: center;
+            margin-right:2px;
+            line-height: 1;
+            transition: color 0.6s ease 0s;
+          }
+        }
+        .mypage {
+          background-color: #eee;
+        }
+        a.mypage:hover{
+          background-color: #eee;
+        }
+      }
+      &__menu-title{
+        margin-bottom: 3px;
+        margin-top:40px;
+        font-size:16px;
+        font-weight: bold;
+      }
+    }
+    //ここまで（左のメニュー）
+
+    &__right-menu{      
+      width: 700px;
+
+      &__user-icon{
+        background-image: url(https://beiz.jp/images_S/light/light_00121.jpg);
+        background-size:100%;
+        overflow: hidden;
+        height: 200px;
+        padding: 20px;
+        position: relative;
+        
+        a{
+          color: $black;
+          left: 0;
+          right: 0;
+          height: fit-content;
+          top: 50%;
+          transform: translate(0, -50%);
+          position: absolute;
+          display: block;
+          text-align: center;
+
+          &:hover{
+            opacity: 0.7;
+
+            h2{
+              text-decoration: underline;
+            }
+          }
+
+          img{
+            border-radius: 50%;
+          }
+
+          h2{
+            font-size: 14px;
+          }
+          
+          .mypage-number{
+            display: flex;
+            justify-content: center;
+            font-size: 14px;
+          
+            span{
+              font-weight: bold;
+              margin-left: 8px;
+            }
+
+            &__right-number{
+              margin-left: 16px;
+            }
+          
+          }
+        }
+      }
+
+      &__top-container{
+        .mypage-top-tab{
+          ul{
+            display: flex;
+
+            li{
+              width: 50%;
+              text-align: center;
+              line-height: 74px;
+
+              a{
+                display: block;
+                color: $black;
+                background-color: darken($lightgray,3%);
+                
+                &:hover{
+                  color: lighten($black, 20%);
+                }
+
+                h3{
+                  font-size: 16px;
+                }
+              }
+
+              a.select{
+                line-height: 74px;
+                border-top: 2px solid $red;
+                background-color: $white;
+                color: $black;
+                display: block;
+              }
+
+              :hover{
+                color: lighten($black, 20%);
+              }
+            }
+          }
+        }
+        .mypage-top-notification{
+          display: none;
+          ul{
+            
+            li{
+              position: relative;
+              background-color: $white;
+              border-bottom: 1px solid $lightgray;
+
+              a{
+                color: $black;
+                display: block;
+                padding: 16px;
+
+                img{
+                  position: absolute;
+                }
+
+                .notification-body{
+                  margin: 0 40px 0 68px;
+
+                  .time{
+                    color: lighten($black,30%);
+                    
+                    span{
+                      font-size: 14px;
+                    }
+                  }
+                }
+
+                .right-arrow{
+                  position: absolute;
+                  top: 40%;
+                  right: 16px;
+                }
+              }
+
+              a:hover{
+                background-color: lighten($lightgray, 2%);
+              }
+            }
+
+            li.mypage-go-list{
+              position: relative;
+              background-color: $white;
+              padding: 16px;
+
+              a{
+                text-align: center;
+                color: $black;
+                display: block;
+                padding: 16px;
+                background-color: darken($lightgray,5%);
+              }
+
+              a:hover{
+                background-color: $lightgray;
+              }
+            }
+          }
+        }
+
+        .current{
+          display: block;
+        }
+      }
+      &__bottom-container{
+        margin-top: 40px;
+        
+          
+        h2{
+          background-color: rgba($white,0.5);
+          padding: 0 16px;
+          font-size: 16px;
+          line-height: 74px;
+        }
+
+        .mypage-bottom-tab{
+          line-height: 74px;
+          ul{
+            display: flex;
+
+            li{
+              width: 50%;
+              line-height: 74px;
+              text-align: center;
+              
+              a{
+                display: block;
+                color: $black;
+                background-color: darken($lightgray,3%);
+                
+                &:hover{
+                  color: lighten($black, 20%);
+                }
+
+                h3{
+                  font-size: 16px;
+                }
+              }
+
+              a.active{
+                border-top: 2px solid $red;
+                background-color: $white;
+                color: $black;
+                display: block;
+                background-color: $white;
+              }
+            }
+          }
+        }
+        .mypage-bottom-panel{
+          .not-found{
+            background: url(logo_gray-1.svg) ;
+            background-position: center 40px;
+            background-repeat: no-repeat;
+            background-size: 150px 150px;
+            text-align: center;
+            background-color: $white;
+            padding: 160px 0 60px;
+            display: none;
+          }
+          .show{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
