@@ -2,7 +2,7 @@
   .header__contents
     .header__contents__top
       .header__contents__top__title-image
-        %a{href: "/"}
+        =link_to "#" do
           %svg{viewbox: "0 0 281.19 84.08", xmlns: "http://www.w3.org/2000/svg", height: "40", width: "134"}
             %defs
               :css
@@ -27,6 +27,8 @@
       .l-right
         %ul.login-nav
           %li.login-nav__sign-up
-            %a{href: "/"} 新規会員登録
+            =link_to "#" do
+              %span 新規会員登録
           %li.login-nav__log-in
-            %a{href: "/"} ログイン
+            =link_to "#" do
+              %span ログイン
