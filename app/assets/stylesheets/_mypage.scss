@@ -19,6 +19,9 @@
       list-style: none;
       li{
         .top-link{
+          line-height: 21px;
+          display: block;
+          height: 100%;
           color: $black;
         }
         .top-link:hover{
@@ -125,7 +128,7 @@
         padding: 20px;
         position: relative;
         
-        a{
+        .information{
           color: $black;
           left: 0;
           right: 0;
@@ -180,7 +183,7 @@
               text-align: center;
               line-height: 74px;
 
-              a{
+              .menu{
                 display: block;
                 color: $black;
                 background-color: darken($lightgray,3%);
@@ -194,7 +197,7 @@
                 }
               }
 
-              a.select{
+              .menu.select{
                 line-height: 74px;
                 border-top: 2px solid $red;
                 background-color: $white;
@@ -217,7 +220,7 @@
               background-color: $white;
               border-bottom: 1px solid $lightgray;
 
-              a{
+              .link{
                 color: $black;
                 display: block;
                 padding: 16px;
@@ -245,7 +248,7 @@
                 }
               }
 
-              a:hover{
+              .link:hover{
                 background-color: lighten($lightgray, 2%);
               }
             }
@@ -255,7 +258,7 @@
               background-color: $white;
               padding: 16px;
 
-              a{
+              .link{
                 text-align: center;
                 color: $black;
                 display: block;
@@ -263,7 +266,7 @@
                 background-color: darken($lightgray,5%);
               }
 
-              a:hover{
+              .link:hover{
                 background-color: $lightgray;
               }
             }
@@ -295,7 +298,7 @@
               line-height: 74px;
               text-align: center;
               
-              a{
+              .tab{
                 display: block;
                 color: $black;
                 background-color: darken($lightgray,3%);
@@ -309,7 +312,7 @@
                 }
               }
 
-              a.active{
+              .tab.active{
                 border-top: 2px solid $red;
                 background-color: $white;
                 color: $black;
