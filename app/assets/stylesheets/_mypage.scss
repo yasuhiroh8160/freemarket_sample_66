@@ -18,10 +18,10 @@
       display:flex;
       list-style: none;
       li{
-        a{
+        .top-link{
           color: $black;
         }
-        a:hover{
+        .top-link:hover{
           text-decoration: underline;
           opacity: 0.8;
         }
