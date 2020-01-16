@@ -5,7 +5,7 @@
   .mypage-nav__nav-box
     %ul
       %li
-        = link_to "#", class:"top-link" do
+        %a{href: "/mypage"}
           Fmarket
       %li.arrow
         >
@@ -162,7 +162,7 @@
     
     .mypage-contents__right-menu
       .mypage-contents__right-menu__user-icon
-        = link_to "#" ,class: "information" do
+        %a.information{href: "/mypage"}
           %img{height: "60", width: "60", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsbPo7e-3mJmSToduD9rn2jQKOePe2TOCqyfGndSJeDuR39rbOyQ&s"}
           %h2 テストユーザー
           .mypage-number
@@ -177,15 +177,15 @@
         .mypage-top-tab
           %ul
             %li
-              = link_to "#tab_1", class:"menu select" do
+              %a.menu.select{href: "#tab_1"}
                 %h3 お知らせ
             %li
-              = link_to "#tab_2", class: "menu" do
+              %a.menu{href: "#tab_2"}
                 %h3 やることリスト
         .mypage-top-notification#tab_1.current
           %ul
             %li
-              = link_to "#", class: "link" do
+              %a{href: "/mypage"}
                 %img{height: "48", width: "48", src: "https://iconbu.com/wp-content/uploads/2019/09/01-12.png"}/
                 
                 .notification-body
@@ -198,7 +198,7 @@
                   %i.fas.fa-chevron-right
 
             %li
-              = link_to "#", class: "link" do
+              %a{href: "/mypage"}
                 %img{height: "48", width: "48", src: "https://iconbu.com/wp-content/uploads/2019/09/01-12.png"}/
                 
                 .notification-body
@@ -211,7 +211,7 @@
                   %i.fas.fa-chevron-right
 
             %li
-              = link_to "#", class: "link" do
+              %a{href: "/mypage"}
                 %img{height: "48", width: "48", src: "https://iconbu.com/wp-content/uploads/2019/09/01-12.png"}/
                 
                 .notification-body
@@ -225,14 +225,13 @@
 
 
             %li.mypage-go-list
-              = link_to "#", class: "link" do
-                %span 一覧へ戻る
+              %a{href: "/mypage"} 一覧へ戻る
 
 
         .mypage-top-notification#tab_2
           %ul
             %li
-              = link_to "#", class: "link" do
+              %a{href: "/mypage"}
                 %img{height: "48", width: "48", src: "https://iconbu.com/wp-content/uploads/2019/09/01-12.png"}/
                 
                 .notification-body
@@ -245,8 +244,7 @@
                   %i.fas.fa-chevron-right
 
             %li.mypage-go-list
-              = link_to "#", class: "link" do
-                %span 一覧へ戻る
+              %a{href: "/mypage"} 一覧へ戻る
 
 
       .mypage-contents__right-menu__bottom-container
@@ -254,12 +252,11 @@
         .mypage-bottom-tab
           %ul
             %li
-              = link_to "#tab_3",class:"tab active" do
+              %a.tab.active{href: "#tab_3"}
                 %h3 取引中
             %li
-              = link_to "#tab_4",class:"tab" do
+              %a.tab{href: "#tab_4"}
                 %h3 過去の取引
-
         .mypage-bottom-panel
           .not-found#tab_3.show
             .not-text-logo
