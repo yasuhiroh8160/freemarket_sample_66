@@ -173,9 +173,16 @@
             クレジットカード一覧
         .card-box__card-content__card-button
           = link_to "#" do
+            %i.far.fa-credit-card
             クレジットカードを追加する
 
-
         .card-box__card-content__card-link
-          = link_to "#" do
-            支払い方法について ＞
+          .bottom_wrap
+            = link_to "#" do
+              支払い方法について ＞
+
+
+
+=render partial: "layouts/button"
+=render partial: "layouts/banner-bottom"
+=render partial: "layouts/footer"
