@@ -6,7 +6,22 @@
   %h1
     ワイドパンツ
   .detail-container__ditail-wrap
+
     .imagebox-left
+      .imagebox-left__imagebox-large
+        = image_tag "/sample_images/bag_sample1.jpg", width: "300", height: "225", class: "active"
+        = image_tag "/sample_images/bag_sample2.jpg", width: "300", height: "225", class: "inactive"
+        = image_tag "/sample_images/bag_sample3.jpg", width: "300", height: "225", class: "inactive"
+        = image_tag "/sample_images/bag_sample4.jpg", width: "300", height: "225", class: "inactive"
+
+      .imagebox-left__imagebox-bottom
+        = image_tag "/sample_images/bag_sample1.jpg", width: "60", height: "60", class: 'small-view'
+        = image_tag "/sample_images/bag_sample2.jpg", width: "60", height: "60", class: 'small-view'
+        = image_tag "/sample_images/bag_sample3.jpg", width: "60", height: "60", class: 'small-view'
+        = image_tag "/sample_images/bag_sample4.jpg", width: "60", height: "60", class: 'small-view'
+
+
+
     %table.table-detail
       %tbody.tbody-detail
         %tr.tr-detail
@@ -16,6 +31,17 @@
             = link_to "#" do
               ○○○○
             .face-icon
+              %span
+                %i.fas.fa-grin.icon-grin
+                0
+              %span
+                %i.fas.fa-meh.icon-meh
+                0
+              %span
+                %i.fas.fa-frown.icon-frown
+                0
+
+
 
         %tr.tr-detail
           %th.th-category
