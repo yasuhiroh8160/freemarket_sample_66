@@ -17,4 +17,16 @@ Rails.application.routes.draw do
       get :card
     end
   end
+
+  resources :registers, only: [:index] do
+    collection do
+      get :first
+      get :second
+      get :third
+      get :forth
+      get :fifth
+    end
+  end
+
+
 end
