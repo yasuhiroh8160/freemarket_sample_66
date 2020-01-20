@@ -68,21 +68,27 @@ $(function(){
 $(function(){
   $('#drop-upload-file').on('change', function (e) {
     var reader = new FileReader();
-    console.log(this)
     reader.onload = function (e) {
       $("#preview").attr('src', e.target.result);
     }
     reader.readAsDataURL(e.target.files[0]);
+
+    $('.upload-item').css('display','block');
+    $('#drop-area').css('margin-left','2%');
+    var inputW =$('#drop-area').width();
+    if(inputW<=10){
+      $('#drop-area').css('display','none');
+    }
   });
 
 })
 
-let fileIndex = [1,2,3,4,5]
 
-$(function(){
-  $('.drop-file-area').on('change', function(e){
-    $('.upload-item').css('display','block');
-    $('#drop-area').css('margin-left','2%');
-  
-  })
-})
+// $(function(){
+//   $('#preview').on('load',function(e){
+//     console.log(this)
+//     $('#preview').remove()
+
+//   })
+// })
+

@@ -28,29 +28,15 @@
 
       .up-load-box__drop-box
         %ul
-          %li.upload-item1
+          %li.upload-item
             %figure
               %img#preview
-
-          %li.upload-item2
-            %figure
-              %img#preview
-
-          %li.upload-item3
-            %figure
-              %img#preview
-
-          %li.upload-item4
-            %figure
-              %img#preview
-
-          %li.upload-item5
-            %figure
-              %img#preview
-
             .button
               =link_to '#', class: 'destroy' do
                 削除
+
+                
+            
         %label#drop-area
           %input.drop-file-area{type: "file", multiple: 'multiple',id: "drop-upload-file", name: "image",accept: "image/*" ,}
           %pre
@@ -194,7 +180,7 @@
               %option{value: "1",}未定
               %option{value: "2",}らくらく便
 
-        .form-group#delivery-child2
+        .form-group.delivarys#delivery-child2
           %label
             配送の方法
             %span.form-require 必須

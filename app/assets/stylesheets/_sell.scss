@@ -58,10 +58,45 @@
           display: flex;
           z-index: 2;
 
+          // li.upload-item-view{
+          //   background-color: darken($lightgray, 3%);
+          //   margin-right: 2%;
+          //   width: 124px;
+          //   display: block;
+          //   position: relative;
+          //   figure{
+          //     top: 0;
+          //     height: 116px;
+          //     width: 114px;
+          //     text-align: center;
+          //     background-color: darken($lightgray, 3%);
+          //     img{
+          //       top: 2px;
+          //       height: 140px;
+          //       width: 105px;
+          //       transform: translate(-50%);
+          //       position: absolute;
+          //       object-fit: cover;
+          //     }
+          //   }
+            
+          //   .button{
+          //     font-size: 14px;
+          //     .destroy{
+          //       position: absolute;
+          //       text-align: center;
+          //       background-color: darken($lightgray, 3%);
+          //       display: inline-block;
+          //       line-height: 44px;
+          //       width: 100%;
+          //     }
+          //   }
+          // }
+
           li.upload-item{
             background-color: darken($lightgray, 3%);
             margin-right: 2%;
-            width: 116px;
+            width: 124px;
             display: none;
             position: relative;
             figure{
@@ -79,6 +114,7 @@
                 object-fit: cover;
               }
             }
+            
             .button{
               font-size: 14px;
               .destroy{
@@ -98,7 +134,8 @@
           background-color: darken($lightgray, 3%);
           outline: 1px dashed $gray;
           position: relative;
-          display: block;
+          vertical-align: center;
+          display: table-cell;
           min-height: 162px;
           width: 100%; 
           
@@ -115,12 +152,16 @@
 
           pre{
             position: absolute;
+            word-wrap: break-word; 
             font-size: 14px;
             text-align: center;
-            line-height: 1.5;
-            top: 60px;
+            // line-height: 1.5;
+            top: 50%;
+            transform: translate(0, -50%);
             left: 16px;
             right: 16px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
           }
         }
         
