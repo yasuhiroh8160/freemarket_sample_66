@@ -58,41 +58,6 @@
           display: flex;
           z-index: 2;
 
-          // li.upload-item-view{
-          //   background-color: darken($lightgray, 3%);
-          //   margin-right: 2%;
-          //   width: 124px;
-          //   display: block;
-          //   position: relative;
-          //   figure{
-          //     top: 0;
-          //     height: 116px;
-          //     width: 114px;
-          //     text-align: center;
-          //     background-color: darken($lightgray, 3%);
-          //     img{
-          //       top: 2px;
-          //       height: 140px;
-          //       width: 105px;
-          //       transform: translate(-50%);
-          //       position: absolute;
-          //       object-fit: cover;
-          //     }
-          //   }
-            
-          //   .button{
-          //     font-size: 14px;
-          //     .destroy{
-          //       position: absolute;
-          //       text-align: center;
-          //       background-color: darken($lightgray, 3%);
-          //       display: inline-block;
-          //       line-height: 44px;
-          //       width: 100%;
-          //     }
-          //   }
-          // }
-
           li.upload-item{
             background-color: darken($lightgray, 3%);
             margin-right: 2%;

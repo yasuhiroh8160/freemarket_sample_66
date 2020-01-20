@@ -50,20 +50,6 @@ $(function(){
   })
 })
 
-// //ドラックアンドドロップの記述。未完成。実装予定
-// $(function(){
-//   $('#drop-area').on('dragover',function(e){
-//     e.preventDefault();
-//     console.log('dragover')
-//   });
-//   $('#drop-area').on('drop',function(e){
-//     e.preventDefault();
-//     $('#drop-upload-file').files = e.originalEvent.dataTransfer.files;
-//     console.log(files)
-//   })
-// })
-
-
 //ファイル選択時に画像を表示する。
 $(function(){
   $('#drop-upload-file').on('change', function (e) {
@@ -82,13 +68,3 @@ $(function(){
   });
 
 })
-
-
-// $(function(){
-//   $('#preview').on('load',function(e){
-//     console.log(this)
-//     $('#preview').remove()
-
-//   })
-// })
-
