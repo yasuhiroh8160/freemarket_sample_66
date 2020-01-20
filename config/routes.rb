@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   root to: 'products#index'
-  resources :products, only: [:index, :show]
+  resources :products, only: [:index]
+  resource :product, only: [:show] do
+    collection do
+      get :buy_confirm
+    end
+  end
+
   resources :tests, only: [:index, :new, :create]
   get '/tmp', to: 'tmps#index'
   get '/logout', to: 'logouts#index'
