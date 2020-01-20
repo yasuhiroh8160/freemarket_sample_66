@@ -18,6 +18,17 @@ Rails.application.routes.draw do
       get :card
     end
   end
+
   resource :sell, only: [:new]
   get '/sell', to: 'sells#new'
+
+  resources :registers, only: [:index] do
+    collection do
+      get :first
+      get :second
+      get :third
+      get :forth
+      get :fifth
+    end
+  end
 end
