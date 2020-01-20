@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'sells/new'
   root to: 'products#index'
   resources :products, only: [:index]
   resource :product, only: [:show] do
@@ -18,6 +19,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resource :sell, only: [:new]
+  get '/sell', to: 'sells#new'
+
   resources :registers, only: [:index] do
     collection do
       get :first
@@ -27,6 +31,4 @@ Rails.application.routes.draw do
       get :fifth
     end
   end
-
-
 end

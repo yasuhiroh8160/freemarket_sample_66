@@ -3,31 +3,34 @@
   .popular__lists
     %ul
       %li
-        %a{href: "/"}レディース
+        = link_to "#" do
+          レディース
       %li
-        %a{href: "/"} メンズ
+        = link_to "#" do
+          メンズ
       %li
-        %a{href: "/"} 家電・スマホ・カメラ
+        = link_to "#" do
+          家電・スマホ・カメラ
       %li
-        %a{href: "/"} おもちゃ・ホビー・グッズ
+        = link_to "#" do
+          おもちゃ・ホビー・グッズ
 
 
 .main-contents
   .main-contents__lists
     .main-contents__lists__head
       %h3 レディース新着アイテム
-      %a{href: "/"}
+      = link_to "#" do
         もっと見る
         %i.fas.fa-chevron-right
     .main-contents__lists__bodys
       .main-contents__lists__bodys__body
         %ul.items
           =render partial: "products/items"
-  
   .main-contents__lists
     .main-contents__lists__head
       %h3 メンズ新着アイテム
-      %a{href: "/"}
+      = link_to "#" do
         もっと見る
         %i.fas.fa-chevron-right
     .main-contents__lists__bodys
@@ -38,7 +41,7 @@
   .main-contents__lists
     .main-contents__lists__head
       %h3 家電・スマホ・カメラ新着アイテム
-      %a{href: "/"}
+      = link_to "#" do
         もっと見る
         %i.fas.fa-chevron-right
     .main-contents__lists__bodys
@@ -49,7 +52,7 @@
   .main-contents__lists
     .main-contents__lists__head
       %h3 おもちゃ・ホビー・グッズ新着アイテム
-      %a{href: "/"}
+      = link_to "#" do
         もっと見る
         %i.fas.fa-chevron-right
     .main-contents__lists__bodys
@@ -63,19 +66,23 @@
   .popular__lists
     %ul
       %li
-        %a{href: "/"} シャネル
+        = link_to "#" do
+          シャネル
       %li
-        %a{href: "/"} ルイヴィトン
+        = link_to "#" do
+          ルイヴィトン
       %li
-        %a{href: "/"} シュプリーム
+        = link_to "#" do
+          シュプリーム
       %li
-        %a{href: "/"} ナイキ
+        = link_to "#" do
+          ナイキ
 
 .main-contents
   .main-contents__lists
     .main-contents__lists__head
       %h3 シャネル
-      %a{href: "/"}
+      = link_to "#" do
         もっと見る
         %i.fas.fa-chevron-right
     .main-contents__lists__bodys
@@ -86,7 +93,7 @@
   .main-contents__lists
     .main-contents__lists__head
       %h3 ルイヴィトン
-      %a{href: "/"}
+      = link_to "#" do
         もっと見る
         %i.fas.fa-chevron-right
     .main-contents__lists__bodys
@@ -97,7 +104,7 @@
     .main-contents__lists
       .main-contents__lists__head
         %h3 シュプリーム
-        %a{href: "/"}
+        = link_to "#" do
           もっと見る
           %i.fas.fa-chevron-right
       .main-contents__lists__bodys
@@ -108,7 +115,7 @@
       .main-contents__lists
         .main-contents__lists__head
           %h3 ナイキ
-          %a{href: "/"}
+          = link_to "#" do
             もっと見る
             %i.fas.fa-chevron-right
         .main-contents__lists__bodys
