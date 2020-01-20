@@ -22,7 +22,15 @@
     .main-contents__lists__bodys
       .main-contents__lists__bodys__body
         %ul.items
-          =render partial: "products/items"
+          %li.item
+            .item__details
+              %a{ href: "/"}
+                %figure
+                  .item-image
+                    %span ¥30,000
+                    %img{ src: "https://o.imgz.jp/fashionnews/105709/cwhi5n7qwwrabxq.jpg"}/
+                  %figcaption
+                    %span そこらへんで拾ってきた画像だからなんのこっちゃしらんけど可愛い
   
   .main-contents__lists
     .main-contents__lists__head
