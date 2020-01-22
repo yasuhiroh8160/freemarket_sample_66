@@ -86,11 +86,5 @@ describe User do
       expect(user.errors[:password]).to include("is too short (minimum is 6 characters)")
     end
 
-    # it "is invalid without a password_confirmation" do
-    #   user = build(:user, encrypted_password: nil)
-    #   user.valid?
-    #   expect(user.errors[:encrypted_password]).to include("can't be blank")
-    # end
-
   end
 end
