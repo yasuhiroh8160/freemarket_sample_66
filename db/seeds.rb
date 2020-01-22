@@ -1,13 +1,9 @@
-レディース
-メンズ
-ベビー・キッズ
-インテリア・住まい・小物
-本・音楽・ゲーム
-おもちゃ・ホビー・グッズ
-コスメ・香水・美容
-家電・スマホ・カメラ
-スポーツ・レジャー
-ハンドメイド
-チケット
-自動車・オートバイ
-その他
+# Brand.create(name: "シャネル")
+# Brand.create(name: "グッチ")
+# Brand.create(name: "ルイヴィトン")
+# Brand.create(name: "シュプリーム")
+# Brand.create(name: "アディダス")
+# Brand.create(name: "ナイキ")
+# Brand.create(name: "プーマ")
+# Brand.create(name: "ブランド一覧")
+
