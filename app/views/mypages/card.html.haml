@@ -1,0 +1,188 @@
+=render partial: "layouts/header"
+.nav-bread
+  .nav-bread__nav-box
+    %ul
+      %li<>
+        メルカリ
+      %li.arrow<>
+        >
+      %li<>
+        = link_to 'マイページ', '＃', class: "editlink"
+      %li.arrow<>
+        >
+      %li.logout<>
+        支払い方法
+
+.main-background
+  .main-contents
+
+    .main-contents__left-menu
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            マイページ
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            お知らせ
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            やることリスト
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            いいね！一覧
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            出品する
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            出品した商品-出品中
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            出品した商品-取引中
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            出品した商品-売却済み
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            購入した商品-取引中
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            購入した商品-過去の取引
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            ニュース一覧
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            評価一覧
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            ガイド
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            お問い合わせ
+          %span.right-arror
+            >
+
+      .main-contents__left-menu__menu-title
+        メルペイ
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            売上・振込申請
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            ポイント
+          %span.right-arror
+            >
+
+      .main-contents__left-menu__menu-title
+        設定
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            プロフィール
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            発送元・お届け先住所変更
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side logout" do
+          %span
+            支払い方法
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            メール/パスワード
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            本人情報
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            電話番号の確認
+          %span.right-arror
+            >
+      .main-contents__left-menu__menu-each
+        = link_to "#", class: "side" do
+          %span
+            ログアウト
+          %span.right-arror
+            >
+    
+    .card-box
+      .card-box__card-top
+        .card-box__card-top__card-inside
+          %span
+            支払い方法
+      .card-box__card-content
+        .card-box__card-content__card-text
+          %p
+            クレジットカード一覧
+        .card-box__card-content__card-button
+          = link_to "#" do
+            %i.far.fa-credit-card
+            クレジットカードを追加する
+
+        .card-box__card-content__card-link
+          .bottom_wrap
+            = link_to "#" do
+              支払い方法について ＞
+
+
+
+=render partial: "layouts/button"
+=render partial: "layouts/banner-bottom"
+=render partial: "layouts/footer"

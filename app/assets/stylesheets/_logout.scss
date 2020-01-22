@@ -9,9 +9,10 @@
   top: 1; 
   left:0; 
   background-color: #ffffff;
-  z-index: 20;
+  z-index: 2;
   &__nav-box{
-    margin: 0 210px;
+    width: 1020px;
+    margin: 0 auto;
     padding: 16px 0;
     ul{
       display:flex;
@@ -98,6 +99,7 @@
         }
         .logout {
           background-color: #eee;
+          font-weight: 600;
         }
         a.logout:hover{
           background-color: #eee;

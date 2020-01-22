@@ -81,6 +81,7 @@
 
           
           &__category-search > a{
+            
             display: block;
             height: 44px;
             width: 100%;
@@ -97,6 +98,7 @@
               color: $lightblue;
               ul{
                 li {  
+                  
                   display: block;
                   height: 44px;
                 }
@@ -111,7 +113,7 @@
               box-shadow: 0 2px 4px $shadow;
               position: absolute;
               top: 44px;
-              z-index: 5;
+              z-index: 100;
               font-weight: normal;
 
               li {

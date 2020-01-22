@@ -76,4 +76,8 @@ end
 gem 'aws-sdk-s3'
 gem "haml-rails"
 
+
 gem 'devise'
+
+gem 'jquery-rails'
+
