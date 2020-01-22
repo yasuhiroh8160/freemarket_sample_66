@@ -912,6 +912,12 @@ body {
   }
 }
 
+.single-header {
+  background-color: $lightgray;
+  height: 128px;
+  text-align: center;
+  padding-top: 32px;
+}
 
 .single-footer {
   bottom: 0;
@@ -939,6 +945,45 @@ body {
   }
 }
 
+
+// 0ページ目
+.page-zero {
+  background-color: $white;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  section {
+    h2 {
+      text-align: center;
+      border-bottom: solid 1px $lightgray;
+      padding: 32px 0;
+    }
+    .login-buttons {
+      padding: 40px 40px 64px;
+      button {
+        display: block;
+        width: 343px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 16px;
+        border-radius: 5px;
+      }
+      .button1 {
+        background-color: $red;
+        color: $white;
+      }
+      .button2 {
+        background-color: #3B5998;
+        color: $white;
+      }
+      .button3 {
+        background-color: $white;
+        border: solid;
+        border-width: thin;
+      }
+    }
+  }
+}
 
 // 1ページ目
 .page-one {
