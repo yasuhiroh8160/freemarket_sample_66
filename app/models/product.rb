@@ -5,4 +5,6 @@ class Product < ApplicationRecord
   belongs_to :size
   belongs_to :condition
   belongs_to :shipping
+  belongs_to :delivery
+  belongs_to :fromprefecture
 end
