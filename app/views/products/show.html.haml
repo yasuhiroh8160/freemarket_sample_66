@@ -4,21 +4,29 @@
 
 .detail-container
   %h1
-    ワイドパンツ
+    = @product.name
   .detail-container__ditail-wrap
 
     .imagebox-left
       .imagebox-left__imagebox-large
-        = image_tag "/sample_images/bag_sample1.jpg", width: "300", height: "225", class: "active"
-        = image_tag "/sample_images/bag_sample2.jpg", width: "300", height: "225", class: "inactive"
-        = image_tag "/sample_images/bag_sample3.jpg", width: "300", height: "225", class: "inactive"
-        = image_tag "/sample_images/bag_sample4.jpg", width: "300", height: "225", class: "inactive"
+
+        - if @product.images.attached?
+          - @product.images.each do |image|
+            = image_tag image, width: "300", height: "225", class: "inactive"
+            
+
+
+        - if @product.images.attached?
+          - @product.images.each do |image|
+            = image_tag image, width: "300", width: "300", height: "225", class: "inactive"
+            %br/
+
 
       .imagebox-left__imagebox-bottom
-        = image_tag "/sample_images/bag_sample1.jpg", width: "60", height: "60", class: 'small-view'
-        = image_tag "/sample_images/bag_sample2.jpg", width: "60", height: "60", class: 'small-view'
-        = image_tag "/sample_images/bag_sample3.jpg", width: "60", height: "60", class: 'small-view'
-        = image_tag "/sample_images/bag_sample4.jpg", width: "60", height: "60", class: 'small-view'
+        - if @product.images.attached?
+          - @product.images.each do |image|
+            = image_tag image, width: "60", height: "60", class: 'small-view'
+            %br/
 
 
 
@@ -29,7 +37,7 @@
             出品者
           %td
             = link_to "#" do
-              ○○○○
+              = @product.user.nickname
             .face-icon
               %span
                 %i.fas.fa-grin.icon-grin
@@ -48,52 +56,55 @@
             カテゴリー
           %td.td-category
             = link_to "#" do
-              レディース
+              = @product.category.parent.parent.name
             = link_to "#" do
-              ＞バッグ
+              >
+              = @product.category.parent.name
             = link_to "#" do
-              ＞ショルダーバッグ
+              >
+              = @product.category.name
 
         %tr.tr-detail
           %th.others
             ブランド
           %td
             = link_to "#" do
-              ○○○○
+              = @product.brand.name
 
         %tr.tr-detail
           %th.others
             商品の状態
           %td
-            目立った傷や汚れなし
+            = @product.condition.name
 
         %tr.tr-detail
           %th.others
             発送料の負担
           %td
-            送料込み(出品者負担)
+            = @product.delivery.name
 
         %tr.tr-detail
           %th.others
             発送の方法
           %td
-            らくらくメルカリ便
+            = @product.shipping.name
 
         %tr.tr-detail
           %th.others
             発送元地域
           %td
             = link_to "#" do
-              福岡県
+              = @product.fromprefecture.name
         %tr.tr-detail
           %th.others
             発送の目安
           %td
-            2~3日で発送
+            = @product.term.name
 
   .price-box
     %span.price
-      ¥7,500
+      ¥
+      = @product.price
     %span.tax
       (税込)
     %span.deliver
@@ -103,7 +114,7 @@
     購入画面に進む
   .item-description
     %p
-      カラーはベージュです。ポケットがたくさん有りとても使いやすいバックです。傷や汚れなどありませんが写真をご確認の上、中古品であるということをご理解いただきご購入をお願いします。
+      = @product.description
 
   .button-container
     .button-container__button-two
