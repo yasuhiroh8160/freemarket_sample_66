@@ -7,15 +7,11 @@ Rails.application.routes.draw do
     get 'addresses', to: 'users/registrations#new_address'
     post 'addresses', to: 'users/registrations#create_address'
   end
-  # root to: 'products#index'
-  resources :tests, only: [:index, :new, :create]
-  # get '/tmp', to: 'tmps#index'
-  get '/mypage', to: 'mypages#index'
-  get '/logout', to: 'logouts#index'
-  
-  get '/signup', to: "signup#index"
 
-  get 'sells/new'
+  
+  # get '/mypage', to: 'mypages#index'
+
+
   root to: 'products#index'
   resources :products, only: [:index]
   resource :product, only: [:show] do
@@ -24,9 +20,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :tests, only: [:index, :new, :create]
-  get '/tmp', to: 'tmps#index'
-  get '/logout', to: 'logouts#index'
+  get '/signup', to: "signup#index"
+
   resource :mypage, only: [:show] do
     collection do
       get :identification
@@ -35,8 +30,18 @@ Rails.application.routes.draw do
     end
   end
 
+  get '/logout', to: 'logouts#index'
   resource :sell, only: [:new]
   get '/sell', to: 'sells#new'
+  
+
+
+
+  #以下作業用およびテスト用。
+
+  resources :tests, only: [:index, :new, :create]
+  get '/tmp', to: 'tmps#index'
+
 
   resources :registers, only: [:index] do
     collection do
