@@ -8,12 +8,12 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   # root to: 'products#index'
-  # resources :tests, only: [:index, :new, :create]
+  resources :tests, only: [:index, :new, :create]
   # get '/tmp', to: 'tmps#index'
-  # get '/mypage', to: 'mypages#index'
-  # get '/logout', to: 'logouts#index'
+  get '/mypage', to: 'mypages#index'
+  get '/logout', to: 'logouts#index'
   
-  root to: "signup#index"
+  get '/signup', to: "signup#index"
 
   get 'sells/new'
   root to: 'products#index'
