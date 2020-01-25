@@ -1,0 +1,17 @@
+- @toys.each do |toy|
+  %li.item
+    .item__details
+      = link_to toy do
+        %figure
+          .item-image
+            %span 
+              ¥
+              = toy.price 
+
+            - if toy.images.attached?
+              - toy.images.each do |image|
+                = image_tag image
+
+          %figcaption
+            %span 
+              = toy.name

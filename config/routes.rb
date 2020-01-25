@@ -11,8 +11,7 @@ Rails.application.routes.draw do
   
 
   root to: 'products#index'
-  resources :products, only: [:index]
-  resource :product, only: [:show] do
+  resources :products, only: [:index, :show] do
     collection do
       get :buy_confirm
     end
