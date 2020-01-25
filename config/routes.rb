@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   end
 
   
+  # get '/mypage', to: 'mypages#index'
+
 
   root to: 'products#index'
   resources :products, only: [:index, :show] do
