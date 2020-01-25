@@ -1,6 +1,7 @@
 //商品詳細ページのjavascript
 
-$(function(){
+$(document).on('turbolinks:load', function(){
+  
   let views = $(".small-view");
   $('.inactive:first').removeClass("inactive").addClass("active");
   
