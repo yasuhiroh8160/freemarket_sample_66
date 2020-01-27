@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   
-  # get '/mypage', to: 'mypages#index'
+ 
 
 
   root to: 'products#index'
