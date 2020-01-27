@@ -18,19 +18,21 @@
       display:flex;
       list-style: none;
       li{
+        a{
+          color: #333333;
+        }
+        a:hover{
+          text-decoration: underline;
+          opacity: 0.8;
+        }
+        span.current{
+          font-weight: 600;
+        }
         .editlink {
           text-decoration: none;
           color: #333;
-          
+        
         }
-      }
-      li.arrow{
-        font-size: 12px;
-        margin: 0 8px;
-        padding-top: 3px;
-      }
-      li.logout{
-        font-weight: 600;
       }
     }
   }
