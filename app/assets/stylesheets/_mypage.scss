@@ -18,15 +18,15 @@
       display:flex;
       list-style: none;
       li{
-        .top-link{
-          line-height: 21px;
-          display: block;
-          height: 100%;
-          color: $black;
+        a{
+          color: #333333;
         }
-        .top-link:hover{
+        a:hover{
           text-decoration: underline;
           opacity: 0.8;
+        }
+        span.current{
+          font-weight: 600;
         }
       }
       li.arrow{

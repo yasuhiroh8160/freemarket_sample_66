@@ -1,0 +1,17 @@
+- @elecs.each do |elec|
+  %li.item
+    .item__details
+      = link_to elec do
+        %figure
+          .item-image
+            %span 
+              ¥
+              = elec.price 
+
+            - if elec.images.attached?
+              - elec.images.each do |image|
+                = image_tag image
+
+          %figcaption
+            %span 
+              = elec.name

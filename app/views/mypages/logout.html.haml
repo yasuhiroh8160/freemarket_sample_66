@@ -1,17 +1,11 @@
 =render partial: "layouts/header"
+- breadcrumb :logout
+
 .nav-bread
   .nav-bread__nav-box
     %ul
-      %li<>
-        メルカリ
-      %li.arrow<>
-        >
-      %li<>
-        = link_to 'マイページ', '＃', class: "editlink"
-      %li.arrow<>
-        >
-      %li.logout<>
-        ログアウト
+      %li
+        = breadcrumbs  separator: " &rsaquo; "
 
 
 .main-background

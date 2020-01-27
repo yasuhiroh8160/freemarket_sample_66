@@ -1,16 +1,14 @@
 =render partial: "layouts/header"
+- breadcrumb :mypage
 
 
 .mypage-nav
   .mypage-nav__nav-box
     %ul
       %li
-        = link_to "#", class:"top-link" do
-          Fmarket
-      %li.arrow
-        >
-      %li.current-page
-        マイページ
+        = breadcrumbs  separator: " &rsaquo; "
+          
+
 
 .mypage-background
   .mypage-contents

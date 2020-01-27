@@ -1,26 +1,47 @@
 Rails.application.routes.draw do
-  get 'sells/new'
+
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations',
+  }
+  devise_scope :user do
+    get 'addresses', to: 'users/registrations#new_address'
+    post 'addresses', to: 'users/registrations#create_address'
+  end
+
+  
+ 
+
+
   root to: 'products#index'
-  resources :products, only: [:index]
-  resource :product, only: [:show] do
+  resources :products, only: [:index, :show] do
     collection do
       get :buy_confirm
     end
   end
 
-  resources :tests, only: [:index, :new, :create]
-  get '/tmp', to: 'tmps#index'
-  get '/logout', to: 'logouts#index'
+  get '/signup', to: "signup#index"
+
   resource :mypage, only: [:show] do
     collection do
       get :identification
       get :profile
       get :card
+      get :logout
     end
   end
 
   resource :sell, only: [:new]
   get '/sell', to: 'sells#new'
+  
+
+
+
+  #以下作業用およびテスト用。
+
+  resources :tests, only: [:index, :new, :create]
+  get '/tmp', to: 'tmps#index'
+
 
   resources :registers, only: [:index] do
     collection do
@@ -31,4 +52,5 @@ Rails.application.routes.draw do
       get :fifth
     end
   end
+
 end

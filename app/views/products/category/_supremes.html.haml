@@ -1,0 +1,17 @@
+- @supremes.each do |supreme|
+  %li.item
+    .item__details
+      = link_to supreme do
+        %figure
+          .item-image
+            %span 
+              ¥
+              = supreme.price 
+
+            - if supreme.images.attached?
+              - supreme.images.each do |image|
+                = image_tag image
+
+          %figcaption
+            %span 
+              = supreme.name

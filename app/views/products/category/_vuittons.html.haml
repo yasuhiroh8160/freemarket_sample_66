@@ -1,0 +1,17 @@
+- @vuittons.each do |vuitton|
+  %li.item
+    .item__details
+      = link_to vuitton do
+        %figure
+          .item-image
+            %span 
+              ¥
+              = vuitton.price 
+
+            - if vuitton.images.attached?
+              - vuitton.images.each do |image|
+                = image_tag image
+
+          %figcaption
+            %span 
+              = vuitton.name

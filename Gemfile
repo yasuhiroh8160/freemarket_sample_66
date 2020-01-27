@@ -45,6 +45,8 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -73,5 +75,17 @@ end
 
 gem 'aws-sdk-s3'
 gem "haml-rails"
+
+
+
+gem 'devise'
+
 gem 'jquery-rails'
+
 gem 'ancestry'
+
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+
+gem "gretel"
