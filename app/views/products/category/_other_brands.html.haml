@@ -1,0 +1,16 @@
+- @other_brands.each do |brand|
+  .other-boxes
+    = link_to brand do
+      .items-box
+        - if brand.images.attached?
+          = image_tag brand.images.first
+        .items-describe
+          %p
+            = brand.name
+          .items-describe__items-num
+            %spna
+              ¥
+              = brand.price
+            .like-icon
+              %i.far.fa-heart
+              1

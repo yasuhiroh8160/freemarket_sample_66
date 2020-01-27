@@ -295,8 +295,14 @@ section.other-sell{
       color: #333333;
     }
     .other-boxes{
+      height: 330px;
+      width: 220px;
       margin-top: 8px;
       .items-box{
+        img {
+          width: 220px;
+          height: 220px;
+        }
         .vertical-line{
           vertical-align: bottom;
         }
