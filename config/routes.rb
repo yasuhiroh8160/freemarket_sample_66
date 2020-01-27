@@ -27,10 +27,10 @@ Rails.application.routes.draw do
       get :identification
       get :profile
       get :card
+      get :logout
     end
   end
 
-  get '/logout', to: 'logouts#index'
   resource :sell, only: [:new]
   get '/sell', to: 'sells#new'
   

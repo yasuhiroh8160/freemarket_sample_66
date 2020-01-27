@@ -10,4 +10,7 @@ class MypagesController < ApplicationController
 
   def card
   end
+
+  def logout
+  end
 end
