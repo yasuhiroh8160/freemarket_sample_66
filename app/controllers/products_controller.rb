@@ -40,11 +40,6 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @other_brands = Product.where(brand_id: @product.brand_id).where.not(id: @product.id)
     @other_myproducts = Product.where(user_id: @product.user_id).where.not(id: @product.id)
-    # @other_myproducts = Product.wher
-    # num_brand = @product.brand_id
-    # all_brandids = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    # all_brandids.delete(num_brand)
-    # @other_brands = Product.where(brand_id: all_brandids).limit(6).order(created_at: "DESC")
   end
 
   def buy_confirm
