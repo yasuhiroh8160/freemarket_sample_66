@@ -43,6 +43,8 @@ class ProductsController < ApplicationController
   end
 
   def buy_confirm
+    @product = Product.new
+    @product = Product.find_by(id: params[:format])
   end
   
 end

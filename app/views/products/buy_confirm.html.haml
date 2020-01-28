@@ -23,13 +23,15 @@
     .confirm-contents__confirm-main__confirm-product
       .product-box
         .product-box__product-image
-          = image_tag "/sample_images/bag_sample1.jpg", width: "70px", height: "70px", alt: "test"
+          - if @product.images.attached?
+            = image_tag @product.images.first , width: "70px", height: "70px"
         .product-box__product-texts
           .product-box__product-texts__product-name
-            サンプルのショルダーバッグ
+            = @product.name
           .product-box__product-texts__product-price
             %span
-              ¥1000
+              ¥
+              = @product.price
             %span
               （税込）送料込み
 
@@ -41,7 +43,8 @@
               支払い金額
             .price-right
               %span
-                ¥1,000
+                ¥
+                = @product.price
           .paying-contents__paying-box__paying-point
             %i.fas.fa-square
             %span
