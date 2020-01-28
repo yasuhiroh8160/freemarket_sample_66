@@ -159,62 +159,7 @@
   = link_to "#", class: "seller-name" do
     ○○さんのその他の出品
   .wrapper
-    .other-boxes
-      = link_to "#" do
-        .items-box
-          = image_tag "/sample_images/bag_sample1.jpg", width: "220", height: "220", class: "vertical-line"
-          .items-describe
-            %p
-              未使用に近いショルダーバッグ。
-            .items-describe__items-num
-              %spna
-                ¥5000円
-              .like-icon
-                %i.far.fa-heart
-                1
-
-    .other-boxes
-      = link_to "#" do
-        .items-box
-          = image_tag "/sample_images/bag_sample1.jpg", width: "220", height: "220", class: "vertical-line"
-          .items-describe
-            %p
-              未使用に近いショルダーバッグ。
-            .items-describe__items-num
-              %spna
-                ¥5000円
-              .like-icon
-                %i.far.fa-heart
-                1
-
-    .other-boxes
-      = link_to "#" do
-        .items-box
-          = image_tag "/sample_images/bag_sample1.jpg", width: "220", height: "220", class: "vertical-line"
-          .items-describe
-            %p
-              未使用に近いショルダーバッグ。
-            .items-describe__items-num
-              %spna
-                ¥5000円
-              .like-icon
-                %i.far.fa-heart
-                1
-
-    .other-boxes
-      = link_to "#" do
-        .items-box
-          = image_tag "/sample_images/bag_sample1.jpg", width: "220", height: "220", class: "vertical-line"
-          .items-describe
-            %p
-              未使用に近いショルダーバッグ。
-            .items-describe__items-num
-              %spna
-                ¥5000円
-              .like-icon
-                %i.far.fa-heart
-                1
-
+    =render partial: "products/category/other_myproducts"
 
 
 -# ここから、「その他の関連商品」
