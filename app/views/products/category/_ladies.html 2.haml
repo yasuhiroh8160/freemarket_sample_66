@@ -1,0 +1,19 @@
+- @ladies.each do |lady|
+  %li.item
+    .item__details
+      = link_to lady do
+        %figure
+          .item-image
+            %span 
+              ¥
+              = lady.price 
+
+            - if lady.images.attached?
+              - lady.images.each do |image|
+                = image_tag image
+
+          %figcaption
+            %span 
+              = lady.name
+
+

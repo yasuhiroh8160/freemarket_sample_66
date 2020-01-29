@@ -946,7 +946,7 @@ body {
 }
 
 
-// 0ページ目
+// // 0ページ目
 .page-zero {
   background-color: $white;
   width: 700px;
@@ -960,13 +960,20 @@ body {
     }
     .login-buttons {
       padding: 40px 40px 64px;
-      button {
-        display: block;
+      .button {
         width: 343px;
         height: 50px;
         margin: 0 auto;
         margin-top: 16px;
         border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        line-height: 50px;
+        i {
+          font-size: 20px;
+          line-height: 50px;
+          margin-right: 30px;
+        }
       }
       .button1 {
         background-color: $red;
@@ -978,6 +985,7 @@ body {
       }
       .button3 {
         background-color: $white;
+        color: $black;
         border: solid;
         border-width: thin;
       }
@@ -989,143 +997,213 @@ body {
 .page-one {
   background-color: $white;
   width: 700px;
-
   margin: 0 auto;
-  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  padding-bottom: 20px;
+  // font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   h2 {
     text-align: center;
     font-size: 22px;
     padding: 32px;
     border-bottom: solid 1px $lightgray;
   }
-  form {
-
-
-    div {
-      margin: 0 auto;
-      max-width: 343px;
-      .form-group >span{
-        background-color: #ea352d;
-        color: #fff;
+  .form-group {
+    margin: 0 auto;
+    max-width: 343px;
+    .field {
+      margin-top: 30px;
+      label {
+        font-family: arial,black;
       }
-      .form-group {
-        text-align: left;
-        margin-top: 32px;
-        label {
-          font-weight: 600;
-        }
-        span {
-          
-          margin: 0 8px;
-          padding: 2px 4px;
-          border-radius: 2px;
-          
-          font-size: 12px;
-          vertical-align: top;
-        }
-        input {
-          height: 48px;
-          width: 100%;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-          display: block;
-          margin: 0 auto;
-        }
-        p {
-          margin: 8px 0 0;
-          line-height: 1.5;
-        }
-        button {
-          display: block;
-          width: 100%;
-          line-height: 48px;
-          font-size: 14px;
-          border: 1px solid transparent;
-          -webkit-transition: all ease-out .3s;
-          transition: all ease-out .3s;
-          cursor: pointer;
-          text-align: center;
-          background-color: $red;
-          border: 1px solid $red;
-          color: $white;
-          margin-top: 30px;
-        }
+      span {
+        margin: 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
+        background-color: $red;
+        color: $white;
+        font-size: 12px;
+        vertical-align: top;
       }
-    } 
-  }
-}
-
-.password-revelation {
-  margin: initial;
-  div {
-    margin: initial;
-    display: flex;
-    align-items: center;
-    #reveal-password {
-      width: initial;
-      margin: initial;
+      input {
+        height: 48px;
+        width: 100%;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 8px;
+        margin-right: 10px;
+      }
+      select {
+        height: 48px;
+        width: 70px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .display {
+        display: flex;
+      }
+      .privacy-policy {
+        height: 72px;
+        background-color: $lightgray;
+        color: gray;
+        padding-top: 20px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    }
+    .action {
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      -webkit-transition: all ease-out .3s;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+      background-color: $red;
+      border: 1px solid $red;
+      color: $white;
+      margin-top: 30px;
     }
   }
-}
-
-.form-require-half {
-  display: flex;
-  margin: initial;
-  #half {
-    width: initial;
-    margin-right: 15px;
-  }
-}
-
-.birthday-select-wrap {
-  height: 50px;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  select {
-    position: relative;
-    z-index: 2;
-    height: 48px;
-    padding: 0 16px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    cursor: pointer;
-  }
-  .birth {
-    background-color: $white;
-    color: $black;
-    margin: 0 8px;
-    padding: 2px 4px;
-    color: $black;
-    font-size: 12px;
-  }
-}
-
-.identify-info {
-  height: 20px;
-  .identify {
-    float: right;
-  }
-}
+  // form {
 
 
-.privacy-policy{
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 50px;
-  #privacy {
-    color: gray;
-    background-color: $lightgray;
-  }
+  //   div {
+  //     margin: 0 auto;
+  //     max-width: 343px;
+  //     .form-group >span{
+  //       background-color: #ea352d;
+  //       color: #fff;
+  //     }
+  //     .form-group {
+  //       text-align: left;
+  //       margin-top: 32px;
+  //       label {
+  //         font-weight: 600;
+  //       }
+  //       span {
+          
+          // margin: 0 8px;
+          // padding: 2px 4px;
+          // border-radius: 2px;
+          
+          // font-size: 12px;
+          // vertical-align: top;
+  //       }
+  //       input {
+          // height: 48px;
+          // width: 100%;
+          // padding: 10px 16px 8px;
+          // border-radius: 4px;
+          // border: 1px solid #ccc;
+          // background: #fff;
+          // line-height: 1.5;
+          // font-size: 16px;
+          // display: block;
+          // margin: 0 auto;
+  //       }
+  //       p {
+  //         margin: 8px 0 0;
+  //         line-height: 1.5;
+  //       }
+  //     }
+  //     .button-next {
+        // display: block;
+        // width: 100%;
+        // line-height: 48px;
+        // font-size: 14px;
+        // border: 1px solid transparent;
+        // -webkit-transition: all ease-out .3s;
+        // transition: all ease-out .3s;
+        // cursor: pointer;
+        // text-align: center;
+        // background-color: $red;
+        // border: 1px solid $red;
+        // color: $white;
+        // margin-top: 30px;
+  //     }
+  //   } 
+  // }
 }
+
+// .password-revelation {
+//   margin: initial;
+//   div {
+//     margin: initial;
+//     display: flex;
+//     align-items: center;
+//     #reveal-password {
+//       width: initial;
+//       margin: initial;
+//     }
+//   }
+// }
+
+// .form-require-half {
+//   display: flex;
+//   margin: initial;
+//   #half {
+//     width: initial;
+//     margin-right: 15px;
+//   }
+// }
+
+// .birthday-select-wrap {
+//   height: 50px;
+//   width: 100%;
+//   margin: 0 auto;
+//   display: flex;
+//   align-items: center;
+//   select {
+//     position: relative;
+//     z-index: 2;
+//     height: 48px;
+//     padding: 0 16px;
+//     border-radius: 4px;
+//     border: 1px solid #ccc;
+//     background: 0;
+//     font-size: 16px;
+//     line-height: 1.5;
+//     cursor: pointer;
+//   }
+//   .birth {
+//     background-color: $white;
+//     color: $black;
+//     margin: 0 8px;
+//     padding: 2px 4px;
+//     color: $black;
+//     font-size: 12px;
+//   }
+// }
+
+// .identify-info {
+//   height: 20px;
+//   .identify {
+//     float: right;
+//   }
+// }
+
+
+// .privacy-policy{
+//   width: 100%;
+//   padding-top: 10px;
+//   padding-bottom: 50px;
+//   #privacy {
+//     color: gray;
+//     background-color: $lightgray;
+//   }
+// }
 
 // ２ページ目
 .page-two {
@@ -1165,21 +1243,6 @@ body {
         margin: 8px 0 0;
         width: 377px;
       }
-      button {
-        display: block;
-        width: 377px;
-        line-height: 48px;
-        font-size: 14px;
-        border: 1px solid transparent;
-        -webkit-transition: all ease-out .3s;
-        transition: all ease-out .3s;
-        cursor: pointer;
-        text-align: center;
-        background-color: $red;
-        border: 1px solid $red;
-        color: $white;
-        margin-top: 30px;
-      }
       a {
         font-size: 15px;
         float: right;
@@ -1187,80 +1250,155 @@ body {
         padding-top: 10px;
         margin-right: -30px;
       }
+      .button-next {
+        background-color: $red;
+        color: $white;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        height: 50px;
+        line-height: 15px;
+      }
     }
   }
 }
 
 // 3ページ目
 .page-three {
-  width: 672px;
+  width: 700px;
   background-color: $white;
   margin: 0 auto;
-  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  padding-bottom: 40px;
+  // font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   h2 {
     text-align: center;
     font-size: 22px;
     padding: 32px;
     border-bottom: solid 1px $lightgray;
   }
-  form {
-    padding: 40px 40px 64px;
-    .contents {
-      width: 343px;
-      margin: 0 auto;
-      .form-content {
-        margin-bottom: 30px;
-        span {
-          background-color: $red;
-          margin: 0 5px;
-          padding: 2px 4px;
-          border-radius: 2px;
-          color: #fff;
-          font-size: 12px;
-          vertical-align: top;
-        }
-        .any {
-          background-color: $gray;
-        }
-        input {
-          height: 30px;
-          width: 100%;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-          display: block;
-          margin: 8px auto;
-        }
-        select {
-          border: solid 1px ;
-          border-color: $gray;
-          height: 45px;
-          width: 343px;
-          margin: 8px auto;
-          display: flex;
-          align-items: center;
-        }
+  .form-group {
+    margin: 0 auto;
+    max-width: 343px;
+    .field {
+      margin-top: 30px;
+      label {
+        font-family: arial,black;
       }
-      button {
-        display: block;
-        width: 377px;
-        line-height: 48px;
-        font-size: 14px;
-        border: 1px solid transparent;
-        -webkit-transition: all ease-out .3s;
-        transition: all ease-out .3s;
-        cursor: pointer;
-        text-align: center;
+      span {
+        margin: 0 8px;
+        padding: 2px 4px;
+        border-radius: 2px;
         background-color: $red;
-        border: 1px solid $red;
         color: $white;
-        margin-top: 30px;
+        font-size: 12px;
+        vertical-align: top;
+      }
+      input {
+        height: 48px;
+        width: 100%;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 8px;
+        margin-right: 10px;
+      }
+      select {
+        height: 48px;
+        width: 70px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .display {
+        display: flex;
+      }
+      .privacy-policy {
+        height: 72px;
+        background-color: $lightgray;
+        color: gray;
+        padding-top: 20px;
+        margin-bottom: 40px;
+        text-align: center;
       }
     }
+    .action {
+      display: block;
+      width: 100%;
+      line-height: 48px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      -webkit-transition: all ease-out .3s;
+      transition: all ease-out .3s;
+      cursor: pointer;
+      text-align: center;
+      background-color: $red;
+      border: 1px solid $red;
+      color: $white;
+      margin-top: 30px;
+    }
   }
+  // form {
+  //   padding: 40px 40px 64px;
+  //   .contents {
+  //     width: 343px;
+  //     margin: 0 auto;
+  //     .form-content {
+  //       margin-bottom: 30px;
+  //       span {
+  //         background-color: $red;
+  //         margin: 0 5px;
+  //         padding: 2px 4px;
+  //         border-radius: 2px;
+  //         color: #fff;
+  //         font-size: 12px;
+  //         vertical-align: top;
+  //       }
+  //       .any {
+  //         background-color: $gray;
+  //       }
+  //       input {
+  //         height: 30px;
+  //         width: 100%;
+  //         padding: 10px 16px 8px;
+  //         border-radius: 4px;
+  //         border: 1px solid #ccc;
+  //         background: #fff;
+  //         line-height: 1.5;
+  //         font-size: 16px;
+  //         display: block;
+  //         margin: 8px auto;
+  //       }
+  //       select {
+  //         border: solid 1px ;
+  //         border-color: $gray;
+  //         height: 45px;
+  //         width: 343px;
+  //         margin: 8px auto;
+  //         display: flex;
+  //         align-items: center;
+  //       }
+  //     }
+  //     .button-next {
+  //       display: block;
+  //       background-color: $red;
+  //       color: $white;
+  //       text-align: center;
+  //       margin-top: 50px;
+  //       margin-bottom: 20px;
+  //       height: 47px;
+  //       line-height: 47px;
+  //     }
+  //   }
+  // }
 }
 
 // 4ページ目
@@ -1331,20 +1469,15 @@ body {
           }
         }
       }
-      button {
+      .button-next {
         display: block;
-        width: 377px;
-        line-height: 48px;
-        font-size: 14px;
-        border: 1px solid transparent;
-        -webkit-transition: all ease-out .3s;
-        transition: all ease-out .3s;
-        cursor: pointer;
-        text-align: center;
         background-color: $red;
-        border: 1px solid $red;
         color: $white;
-        margin-top: 60px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        height: 47px;
+        line-height: 47px;
       }
     }
   }
@@ -1371,20 +1504,15 @@ body {
       p {
         text-align: center;
       }
-      button {
+      .button-next {
         display: block;
-        width: 377px;
-        line-height: 48px;
-        font-size: 14px;
-        border: 1px solid transparent;
-        -webkit-transition: all ease-out .3s;
-        transition: all ease-out .3s;
-        cursor: pointer;
-        text-align: center;
         background-color: $red;
-        border: 1px solid $red;
         color: $white;
-        margin-top: 60px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        height: 47px;
+        line-height: 47px;
       }
     }
   }

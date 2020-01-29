@@ -2,7 +2,7 @@
   .header-min
     %h1
       %link_to{href: ""}
-        %img{src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?1144760951"}/
+        = image_tag "/fmarket_logo_red.svg", height:'50', width:'185'
     %nav
       %ol.clearfix
         %li.procedure_one
@@ -34,7 +34,8 @@
         %label.label-default{for: "phone_number"} 携帯電話の番号
         %input.input-default{name: "phone_number", placeholder: "携帯電話の番号を入力", type: "tel", value: ""}/
       %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
-      %button{type: "submit"} SMSを送信する
+      = link_to third_registers_path , class: 'button-next' do
+        %p 次へ進む
       %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
       %link_to{href: "", target: "_blank"}
         電話番号の確認が必要な理由
@@ -49,6 +50,6 @@
       %li
         %link_to{href: ""} 特定商取引に関する表記
   %link_to{href: "https://www.mercari.com/jp/"}
-    %img{alt: "mercari", height: "65", src: "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?2091621301", width: "80"}/
+    = image_tag "/logo_gray.svg", height:'65', width:'80'
   %p
     %small © Mercari, Inc.

@@ -26,6 +26,18 @@
     vertical-align: top;
     font-weight: bold;
   }
+  p.empty {
+    color: $red;
+    font-size: 14px;
+  } 
+
+  p.price_name{
+    
+  }
+
+  .any{
+    background-color: $gray;
+  }
   &__contents{
     .contents-header{
       border-bottom: 2px solid $lightgray;
@@ -39,6 +51,7 @@
     .up-load-box{
       padding: 40px;
       border-bottom: 2px solid $lightgray;
+
       h3{
         font-size: 16px;
       }
@@ -58,6 +71,7 @@
           display: flex;
           z-index: 2;
 
+          
           li.upload-item{
             background-color: darken($lightgray, 3%);
             margin-right: 2%;
@@ -67,9 +81,9 @@
             figure{
               top: 0;
               height: 116px;
-              width: 114px;
               text-align: center;
               background-color: darken($lightgray, 3%);
+
               img{
                 top: 2px;
                 height: 140px;
@@ -92,9 +106,17 @@
               }
             }
           }
-
+          li.pic{
+            display: block;
+          }
+          
         }
-
+        .none{
+          display: none;
+        }
+        .active{
+          display: block;
+        }
         label{
           background-color: darken($lightgray, 3%);
           outline: 1px dashed $gray;
@@ -120,7 +142,6 @@
             word-wrap: break-word; 
             font-size: 14px;
             text-align: center;
-            // line-height: 1.5;
             top: 50%;
             transform: translate(0, -50%);
             left: 16px;
@@ -137,9 +158,6 @@
       padding: 40px;
       border-bottom: 2px solid $lightgray;
 
-      .delivarys{
-        display: none;
-      }
       .form-group{
 
         &:not(:first-child){
@@ -181,18 +199,17 @@
       }
 
       .sell-form-box{
-        #delivery-child{
+
+        #size{
+          display: none;
+        }
+
+        #brand{
           display: none;
         }
 
         .form-group{
-          
-          .children{
-            display: none;
-          }
-          .grand-children{
-            display: none;
-          }
+        
           .select-wrap{
             position: relative;
             width: 400px;
@@ -200,7 +217,7 @@
             
             height: 48px;
             border: 1px solid $gray;
-            border-radius: 4px;
+            border-radius: 6px;
 
             i{
               display: block;
@@ -224,12 +241,11 @@
               outline: none;
 
               &:focus{
-                border-width: 1px;
-                border-style: solid;
-                border-color: $lightblue;
+                border: 1px solid $lightblue;
+                
               }
             }
-
+            
           }
         } 
 
@@ -242,14 +258,18 @@
             height: 72px;
             &:not(:first-child){
               padding-top: 24px;
-            }
-            &:not(:last-child){
-              border-bottom: 1px solid $gray;
+              border-top: 1px solid $gray;
             }
             .prace-form{
               display: flex;
               justify-content: space-between;
               line-height:48px;
+              
+              input[type=number]::-webkit-inner-spin-button,
+              input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+              }
               .l-left{
                 width: 200px;
               }
