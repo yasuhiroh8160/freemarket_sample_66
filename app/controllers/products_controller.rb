@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 
-  before_action :authenticate_user!, only: [:buy_confirm]
+  before_action :redirect_root, only: [:buy_confirm]
 
   require 'payjp'
 
@@ -71,7 +71,6 @@ class ProductsController < ApplicationController
 
 
   def create
-    
     @product = Product.new(create_params)
     @product.save!
   end
@@ -79,9 +78,6 @@ class ProductsController < ApplicationController
   def buy_confirm
     @product = Product.new
     @product = Product.find_by(id: params[:format])
-    # @current_user = User.find_by(id: session[:user_id])
-    # @user = User.find_by(id: session[:user_id])
-    # @current_user = User.find(1)
   end
 
   def purchase
@@ -89,11 +85,11 @@ class ProductsController < ApplicationController
 
     @product = Product.find(params[:id])
     Payjp::Charge.create(
-      amount: @product.price, # 決済する値段
-      card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
+      amount: @product.price,
+      card: params['payjp-token'],
       currency: 'jpy'
     )
-    flash[:notice] = '購入しました' 
+    @product.update(buyer_id: current_user.id)
     redirect_to done_products_path
   end
 
@@ -104,6 +100,10 @@ class ProductsController < ApplicationController
   private
   def create_params
     params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id, images: [])
+  end
+
+  def redirect_root
+    redirect_to root_path unless user_signed_in?
   end
   
 end
