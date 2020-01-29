@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     collection do
       get :buy_confirm
       post :purchase
+      get :done
     end
   end
 

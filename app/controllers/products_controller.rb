@@ -60,7 +60,10 @@ class ProductsController < ApplicationController
       currency: 'jpy'
     )
     flash[:notice] = '購入しました' 
-    redirect_to :root 
+    redirect_to done_products_path
+  end
+
+  def done
   end
 
   
