@@ -76,7 +76,6 @@ class ProductsController < ApplicationController
   end
 
   def buy_confirm
-    @product = Product.new
     @product = Product.find(params[:format])
   end
 
