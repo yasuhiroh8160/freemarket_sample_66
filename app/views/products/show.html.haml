@@ -5,6 +5,10 @@
 .detail-container
   %h1
     = @product.name
+    - if user_signed_in? && current_user.id == @product.user_id
+      %i.fas.fa-chevron-right
+        =link_to edit_product_path(@product.id) , class:"edit-btn" do
+          編集する
   .detail-container__ditail-wrap
 
     .imagebox-left
@@ -130,6 +134,8 @@
 
     = link_to "#", class: "button-secure" do
       あんしん・あんぜんへの取り組み
+
+
      
 
 .comment-container

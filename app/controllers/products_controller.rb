@@ -1,11 +1,14 @@
 class ProductsController < ApplicationController
 
   before_action :redirect_root, only: [:buy_confirm]
+  before_action :set_product, only: [:show, :edit, :update, :buy_confirm, :purchase]
 
   require 'payjp'
 
   def index
     @product = Product.all
+    @parents = Category.all.order("id ASC").limit(14)
+    @brands = Brand.all.order("id ASC").limit(8)
 
     #レディース
     nums_ladies = Category.where(ancestry: '1/15').or(Category.where(ancestry: '1/16')).or(Category.where(ancestry: '1/17')).or(Category.where(ancestry: '1/18')).or(Category.where(ancestry: '1/19')).or(Category.where(ancestry: '1/20')).ids
@@ -42,7 +45,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
     @other_brands = Product.where(brand_id: @product.brand_id).where.not(id: @product.id)
     @other_myproducts = Product.where(user_id: @product.user_id).where.not(id: @product.id)
   end
@@ -75,6 +77,17 @@ class ProductsController < ApplicationController
     @product.save!
   end
 
+  def edit
+  end
+
+  def update
+    if @product.update(create_params)
+      redirect_to root_path
+    else
+      render "edit"
+    end
+  end
+
   def buy_confirm
     @product = Product.find(params[:format])
   end
@@ -82,7 +95,6 @@ class ProductsController < ApplicationController
   def purchase
     Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
 
-    @product = Product.find(params[:id])
     Payjp::Charge.create(
       amount: @product.price,
       card: params['payjp-token'],
@@ -98,9 +110,13 @@ class ProductsController < ApplicationController
 
   private
   def create_params
-    params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id, images: [])
+    params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id,:_destroy ,images: []).merge(user_id: current_user.id)
   end
 
+  def set_product
+    @product = Product.find(params[:id])
+  end
+  
   def redirect_root
     redirect_to root_path unless user_signed_in?
   end
