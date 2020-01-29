@@ -7,6 +7,8 @@ class ProductsController < ApplicationController
 
   def index
     @product = Product.all
+    @parents = Category.all.order("id ASC").limit(14)
+    @brands = Brand.all.order("id ASC").limit(8)
 
     #レディース
     nums_ladies = Category.where(ancestry: '1/15').or(Category.where(ancestry: '1/16')).or(Category.where(ancestry: '1/17')).or(Category.where(ancestry: '1/18')).or(Category.where(ancestry: '1/19')).or(Category.where(ancestry: '1/20')).ids
