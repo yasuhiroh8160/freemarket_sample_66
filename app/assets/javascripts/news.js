@@ -88,34 +88,12 @@ $(document).on('turbolinks:load', ()=> {
     fileIndex.push(fileIndex[fileIndex.length - 1] + 1)
     $(".active").removeClass("active");
     $("#drop-area"+input_name).addClass("active")
-  });
-});
-
-
-
-$(function(){
-  $('#image-box').on('change', function(e) {
     var w =$(".box").width()
-    console.log(w)
     if (w == 620){
       $(".box").css("display","none")
     }
-  })
-})
-// $(function(){
-//   $("#image-box").each(function () {
-//     var num = $(this).find('#have-items li').length;
-//     console.log(num)
-//     if(num == 4){
-//       $('#drop-area').css('display','none');
-//     }
-//   });
-// });
-
-
-
-
-
+  });
+});
 
 $(document).on('turbolinks:load', function() {
   $(function(){
