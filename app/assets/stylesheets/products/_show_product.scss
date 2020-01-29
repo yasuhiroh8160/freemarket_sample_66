@@ -290,13 +290,22 @@ section.other-sell{
     width: 100%;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-content:space-between;
+    justify-content: start;
     a{
       color: #333333;
     }
     .other-boxes{
+      height: 330px;
+      width: 220px;
       margin-top: 8px;
+      margin-right: 12px;
+
       .items-box{
+        img {
+          width: 220px;
+          height: 220px;
+        }
         .vertical-line{
           vertical-align: bottom;
         }

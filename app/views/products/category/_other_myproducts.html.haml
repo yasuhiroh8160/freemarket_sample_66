@@ -1,0 +1,16 @@
+- @other_myproducts.each do |myproduct|
+  .other-boxes
+    = link_to myproduct do
+      .items-box
+        - if myproduct.images.attached?
+          = image_tag myproduct.images.first
+        .items-describe
+          %p
+            = myproduct.name
+          .items-describe__items-num
+            %spna
+              ¥
+              = myproduct.price
+            .like-icon
+              %i.far.fa-heart
+              1
