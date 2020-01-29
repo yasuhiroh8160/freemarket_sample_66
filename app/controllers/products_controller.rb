@@ -77,7 +77,7 @@ class ProductsController < ApplicationController
 
   def buy_confirm
     @product = Product.new
-    @product = Product.find_by(id: params[:format])
+    @product = Product.find(params[:format])
   end
 
   def purchase
