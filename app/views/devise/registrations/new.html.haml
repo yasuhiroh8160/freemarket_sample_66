@@ -1,67 +1,105 @@
-%h2 ユーザー情報登録
-= form_for(@user, url: user_registration_path) do |f|
-  = render "devise/shared/error_messages", resource: @user
-  .field
-    = f.label :nickname
-    %br/
-    = f.text_field :nickname
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  - if @sns_id.present?
-    = hidden_field_tag :sns_auth, true
-  - else
-    .field
-      = f.label :password
-      - if @minimum_password_length
-        %em
-          (#{@minimum_password_length} characters minimum)
-      %br/
-      = f.password_field :password, autocomplete: "new-password"
-    .field
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password"
-  -# .field
-  -#   = f.label :password
-  -#   - if @minimum_password_length
-  -#     %em
-  -#       (#{@minimum_password_length} characters minimum)
-  -#   %br/
-  -#   = f.password_field :password, autocomplete: "new-password"
-  -# .field
-  -#   = f.label :password_confirmation
-  -#   %br/
-  -#   = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    =f.label :last_name
-    %br/
-    = f.text_field :last_name
-  .field
-    =f.label :first_name
-    %br/
-    = f.text_field :first_name
-  .field
-    =f.label :last_name_kana
-    %br/
-    = f.text_field :last_name_kana
-  .field
-    =f.label :first_name_kana
-    %br/
-    = f.text_field :first_name_kana
-  .field
-    =f.label :birth_year
-    %br/
-    = f.text_field :birth_year
-  .field
-    =f.label :birth_month
-    %br/
-    = f.text_field :birth_month
-  .field
-    =f.label :birth_day
-    %br/
-    = f.text_field :birth_day
-  .actions
-    = f.submit "Next"
-= render "devise/shared/links"
+%header.single-header-one
+  .header-min
+    %h1
+      %link_to{href: ""}
+        = image_tag "/fmarket_logo_red.svg", height:'50', width:'185'
+    %nav
+      %ol.clearfix
+        %li.procedure_one
+          会員情報
+          %br/
+          .progress-status
+        %li.procedure_two
+          電話番号認証
+          %br/
+          .progress-status
+        %li.procedure_three
+          お届け先住所
+          %br/
+          .progress-status
+        %li.procedure_four
+          支払い方法
+          %br/
+          .progress-status
+        %li.procedure_five
+          完了
+          %br/
+          .progress-status
+%main.page-one
+  %h2 会員情報入力
+  = form_for(@user, url: user_registration_path) do |f|
+    = render "devise/shared/error_messages", resource: @user
+    .form-group
+      .field
+        = f.label :nickname, "ニックネーム"
+        %span 必須
+        %br/
+        = f.text_field :nickname, placeholder: "例) メルカリ太郎"
+      .field
+        = f.label :email, "メールアドレス"
+        %span 必須
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可"
+      - if @sns_id.present?
+        = hidden_field_tag :sns_auth, true
+      - else
+        .field
+          = f.label :password, "パスワード"
+          %span 必須
+          %br/
+          = f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上の半角英数字"
+          %br/
+          %p ※ 英字と数字の両方を含めて設定してください
+        -# .field
+        -#   = f.label :password_confirmation, "パスワード確認"
+        -#   %br/
+        -#   = f.password_field :password_confirmation, autocomplete: "new-password"
+      .field
+        %h3 本人確認
+        %p 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+      .field
+        =f.label :last_name, "お名前(全角)"
+        %span 必須
+        %br/
+        .display
+          = f.text_field :last_name, placeholder: "例) 山田"
+          = f.text_field :first_name, placeholder: "例) 彩"
+      .field
+        =f.label :last_name_kana, "お名前カナ(全角)"
+        %span 必須
+        %br/
+        .display
+          = f.text_field :last_name_kana, placeholder: "例) ヤマダ"
+          = f.text_field :first_name_kana, placeholder: "例) アヤ"
+      .field
+        =f.label :birth_year, "生年月日"
+        %span 必須
+        %br/
+        -# = f.date_select  :birthday, start_year: 1950, end_year: 2020
+        .display
+          =f.date_select :birthday, prompt:"--", use_month_numbers:true, start_year:1950, end_year:2020
+        %p ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+      .field
+        %p 「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+      .action
+        = f.submit "次へ進む"
+      -# .field
+      -#   .display.identify-info
+      -#     %p 本人情報の登録について
+      -#     %i.fas.fa-chevron-right
+      .field
+        %p.privacy-policy This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+  -# = render "devise/shared/links"
+%footer.single-footer
+  %nav
+    %ul.clearfix
+      %li
+        %link_to{href: ""} プライバシーポリシー
+      %li
+        %link_to{href: ""} メルカリ利用規約
+      %li
+        %link_to{href: ""} 特定商取引に関する表記
+  %link_to{href: "https://www.mercari.com/jp/"}
+    = image_tag "/logo_gray.svg", height:'65', width:'80'
+  %p
+    %small © Mercari, Inc.
