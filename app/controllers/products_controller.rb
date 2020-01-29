@@ -40,6 +40,47 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def new
+    @products = Product.new
+  end
+
+  def get_category_children
+    #選択された親カテゴリーに紐付く子カテゴリーの配列を取得
+    @category_children = Category.find_by(id: "#{params[:parent_id]}", ancestry: nil).children
+ end
+
+  def get_category_grandchildren
+    #選択された子カテゴリーに紐付く孫カテゴリーの配列を取得
+    @category_grandchildren = Category.find("#{params[:child_id]}").children
+  end
+
+  def get_shipping_PayFormer
+    @shipping_payformer = Shipping.all
+  end
+
+  def get_shipping_PayGuest
+    @shipping_payguest = Shipping.find(1,6,7,3)
+  end
+
+
+  def create
+    
+    @products = Product.new(create_params)
+    if @products.save
+      
+    else
+      @products = Product.new(create_params)
+      render "new"
+    end
+  end
+
+  private
+  def create_params
+    params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id, images: [])
+  end
+
+
+
   def buy_confirm
   end
   
