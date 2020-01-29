@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
   before_action :redirect_root, only: [:buy_confirm]
+  before_action :set_id, only: [:show, :edit, :update, :buy_confirm, :purchase]
 
   require 'payjp'
 
@@ -42,7 +43,6 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
     @other_brands = Product.where(brand_id: @product.brand_id).where.not(id: @product.id)
     @other_myproducts = Product.where(user_id: @product.user_id).where.not(id: @product.id)
   end
@@ -76,11 +76,9 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
-    @product = Product.find(params[:id])
     if @product.update(create_params)
       redirect_to root_path
     else
@@ -95,7 +93,6 @@ class ProductsController < ApplicationController
   def purchase
     Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
 
-    @product = Product.find(params[:id])
     Payjp::Charge.create(
       amount: @product.price,
       card: params['payjp-token'],
@@ -114,6 +111,10 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id,:_destroy ,images: []).merge(user_id: current_user.id)
   end
 
+  def set_id
+    @product = Product.find(params[:id])
+  end
+  
   def redirect_root
     redirect_to root_path unless user_signed_in?
   end
