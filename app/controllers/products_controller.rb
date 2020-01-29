@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+  require 'payjp'
+
   def index
     @product = Product.all
 
@@ -46,5 +49,19 @@ class ProductsController < ApplicationController
     @product = Product.new
     @product = Product.find_by(id: params[:format])
   end
+
+  def purchase
+    Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
+
+    @product = Product.find(params[:id])
+    Payjp::Charge.create(
+      amount: @product.price, # 決済する値段
+      card: params['payjp-token'], # フォームを送信すると作成・送信されてくるトークン
+      currency: 'jpy'
+    )
+    flash[:notice] = '購入しました' 
+    redirect_to :root 
+  end
+
   
 end

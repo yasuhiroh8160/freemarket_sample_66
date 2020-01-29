@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show] do
     collection do
       get :buy_confirm
+      post :purchase
     end
   end
 

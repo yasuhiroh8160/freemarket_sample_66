@@ -76,6 +76,12 @@
 
         .paying-contents__paying-button
           %button{disabled: "", type: "submit", class: 'gray-button'} 購入する
+        
+        = form_with url: purchase_products_path(id: @product.id) do
+          :plain
+            <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_aae084f90697dd1cf39b6a02"></script>
+
+
 
 
 
