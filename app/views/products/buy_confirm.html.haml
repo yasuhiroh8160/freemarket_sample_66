@@ -77,8 +77,6 @@
               = current_user.last_name
               = current_user.first_name
 
-        .paying-contents__paying-button
-          %button{disabled: "", type: "submit", class: 'gray-button'} 購入する
         
         = form_with url: purchase_products_path(id: @product.id) do
           :plain
