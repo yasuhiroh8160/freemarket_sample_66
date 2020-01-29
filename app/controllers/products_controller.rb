@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   before_action :redirect_root, only: [:buy_confirm]
-  before_action :set_id, only: [:show, :edit, :update, :buy_confirm, :purchase]
+  before_action :set_product, only: [:show, :edit, :update, :buy_confirm, :purchase]
 
   require 'payjp'
 
@@ -113,7 +113,7 @@ class ProductsController < ApplicationController
     params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id,:_destroy ,images: []).merge(user_id: current_user.id)
   end
 
-  def set_id
+  def set_product
     @product = Product.find(params[:id])
   end
   
