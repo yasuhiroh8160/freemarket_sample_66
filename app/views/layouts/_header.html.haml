@@ -26,9 +26,16 @@
       =render partial: "layouts/select"
       .l-right
         %ul.login-nav
-          %li.login-nav__sign-up
-            =link_to "signup" do
-              %span 新規会員登録
-          %li.login-nav__log-in
-            =link_to new_user_session_path do
-              %span ログイン
+          - if user_signed_in?
+            -# = "#{current_user.nickname}でログイン中"
+            %li.login-nav__log-in
+              = link_to destroy_user_session_path, method: :delete do
+                %span ログアウト
+          - else
+            %li.login-nav__sign-up
+              =link_to "signup" do
+                %span 新規会員登録
+            %li.login-nav__log-in
+              =link_to new_user_session_path do
+                %span ログイン
+
