@@ -21,6 +21,8 @@ Rails.application.routes.draw do
       get 'get_shipping_PayGuest', defaults: { format: 'json' }
       get 'get_shipping_PayFormer', defaults: { format: 'json' }
       get :buy_confirm
+      post :purchase
+      get :done
     end
   end
 

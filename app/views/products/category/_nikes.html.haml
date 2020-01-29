@@ -12,6 +12,11 @@
               - nike.images.each do |image|
                 = image_tag image
 
+            - if nike.buyer_id.present? 
+              .items-box_photo__sold
+                .items-box_photo__sold__inner
+                  SOLD
+
           %figcaption
             %span 
               = nike.name

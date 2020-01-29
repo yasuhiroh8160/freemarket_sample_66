@@ -1,4 +1,9 @@
 class ProductsController < ApplicationController
+
+  before_action :redirect_root, only: [:buy_confirm]
+
+  require 'payjp'
+
   def index
     @product = Product.all
 
@@ -66,11 +71,9 @@ class ProductsController < ApplicationController
 
 
   def create
-    
     @product = Product.new(create_params)
     @product.save!
   end
-
 
   def edit
     @product = Product.find(params[:id])
@@ -84,16 +87,35 @@ class ProductsController < ApplicationController
       render "edit"
     end
   end
-  
+
+  def buy_confirm
+    @product = Product.find(params[:format])
+  end
+
+  def purchase
+    Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
+
+    @product = Product.find(params[:id])
+    Payjp::Charge.create(
+      amount: @product.price,
+      card: params['payjp-token'],
+      currency: 'jpy'
+    )
+    @product.update(buyer_id: current_user.id)
+    redirect_to done_products_path
+  end
+
+  def done
+  end
+
 
   private
   def create_params
     params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id,:_destroy ,images: []).merge(user_id: current_user.id)
   end
 
-
-
-  def buy_confirm
+  def redirect_root
+    redirect_to root_path unless user_signed_in?
   end
   
 end
