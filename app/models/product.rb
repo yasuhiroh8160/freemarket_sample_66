@@ -1,5 +1,13 @@
 class Product < ApplicationRecord
+  validates :name, :price, :description, :term_id, :size_id, :condition_id, :shipping_id, :delivery_id, :fromprefecture_id, :category_id, :user_id,  presence: true
   has_many_attached :images
+
+  validate :image_presence
+
+  def image_presence
+    images.attached?
+  end
+
   belongs_to :user, optional: true
   belongs_to :brand, optional: true
   belongs_to :term, optional: true
