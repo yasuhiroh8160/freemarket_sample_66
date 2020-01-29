@@ -29,7 +29,6 @@
   p.empty {
     color: $red;
     font-size: 14px;
-    // display: none;
   } 
 
   p.price_name{
@@ -143,7 +142,6 @@
             word-wrap: break-word; 
             font-size: 14px;
             text-align: center;
-            // line-height: 1.5;
             top: 50%;
             transform: translate(0, -50%);
             left: 16px;

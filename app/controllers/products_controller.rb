@@ -43,7 +43,7 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @products = Product.new
+    @product = Product.new
   end
 
   def get_category_children
@@ -67,13 +67,8 @@ class ProductsController < ApplicationController
 
   def create
     
-    @products = Product.new(create_params)
-    if @products.save
-      
-    else
-      @products = Product.new(create_params)
-      render "new"
-    end
+    @product = Product.new(create_params)
+    @product.save!
   end
 
   private

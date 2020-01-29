@@ -85,11 +85,6 @@ $(document).on('turbolinks:load', ()=> {
 
 
 
-
-
-
-
-
 $(document).on('turbolinks:load', function() {
   $(function(){
     function appendOption(category){

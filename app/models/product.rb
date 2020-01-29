@@ -5,10 +5,7 @@ class Product < ApplicationRecord
   validate :image_presence
 
   def image_presence
-    if images.attached?
-    else
-      errors.add(:images, 'ファイルを添付してください')
-    end
+    images.attached?
   end
 
   belongs_to :user, optional: true

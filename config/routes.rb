@@ -14,8 +14,14 @@ Rails.application.routes.draw do
 
 
   root to: 'products#index'
-  resources :products, only: [:index, :show] do
+  get '/new', to: 'products#new'
+  post '/products', to: 'products#create'
+  resources :products, only: [:index, :show, :new, :create] do
     collection do
+      get 'get_category_children', defaults: { format: 'json' }
+      get 'get_category_grandchildren', defaults: { format: 'json' }
+      get 'get_shipping_PayGuest', defaults: { format: 'json' }
+      get 'get_shipping_PayFormer', defaults: { format: 'json' }
       get :buy_confirm
     end
   end
@@ -31,17 +37,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/new', to: 'products#new'
-  post '/products', to: 'products#create'
-  resource :product, only: [:new,:create]do
-    collection do
-      get 'get_category_children', defaults: { format: 'json' }
-      get 'get_category_grandchildren', defaults: { format: 'json' }
-      get 'get_shipping_PayGuest', defaults: { format: 'json' }
-      get 'get_shipping_PayFormer', defaults: { format: 'json' }
-      get :buy_confirm
-    end
-  end
 
   #以下作業用およびテスト用。
 
