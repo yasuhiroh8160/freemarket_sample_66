@@ -71,12 +71,15 @@
           display: flex;
           z-index: 2;
 
-          
           li.upload-item{
-            background-color: darken($lightgray, 3%);
-            margin-right: 2%;
-            width: 124px;
             display: none;
+          }
+          
+          li{
+            background-color: darken($lightgray, 3%);
+            margin-right: 5px;
+            width: 120px;
+
             position: relative;
             figure{
               top: 0;
@@ -98,6 +101,8 @@
               font-size: 14px;
               .destroy{
                 position: absolute;
+                cursor: pointer;
+                color: $lightblue;
                 text-align: center;
                 background-color: darken($lightgray, 3%);
                 display: inline-block;

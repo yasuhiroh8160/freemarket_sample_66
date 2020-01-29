@@ -71,9 +71,24 @@ class ProductsController < ApplicationController
     @product.save!
   end
 
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    if @product.update(create_params)
+      redirect_to root_path
+    else
+      render "edit"
+    end
+  end
+  
+
   private
   def create_params
-    params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id, images: [])
+    params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id,:_destroy ,images: []).merge(user_id: current_user.id)
   end
 
 

@@ -4,7 +4,7 @@ function keyup(elem){
     if(num>=300 && num<=9999999){
       var commission=$('#input').val()*0.1;
       $('#commission').text("¥"+Math.floor(commission).toString().replace(/\B(?=(\d{3})+(?!\d))/g,','));
-
+      
       var profit=$('#input').val()-commission;
       $('#profit').text("¥"+Math.ceil(profit).toString().replace(/\B(?=(\d{3})+(?!\d))/g,','));
     }
@@ -14,6 +14,15 @@ function keyup(elem){
     }
   }
 }
+$(document).on('turbolinks:load', ()=> {
+  $(function(){
+    $(".destroy").on('click',function(){
+
+      $(this).parent().parent().remove();
+    })
+  })
+});
+
 $(document).on('turbolinks:load', ()=> {
   //ファイル選択時に画像を表示する。
   $(function(){
@@ -29,6 +38,8 @@ $(document).on('turbolinks:load', ()=> {
   })
 })
 
+
+
 $(document).on('turbolinks:load', ()=> {
   // 画像用のinputを生成する関数
   const buildImage = (index)=> {
@@ -37,7 +48,7 @@ $(document).on('turbolinks:load', ()=> {
                       <img id="preview">
                     </figure>
                     <div class="button">
-                    <a href=“#”, class= 'destroy'>削除</a> 
+                      <div class='destroy'>削除</div> 
                     </div>
                   </li>`;
     return html;
@@ -56,10 +67,9 @@ $(document).on('turbolinks:load', ()=> {
 
 
 
-
 $(document).on('turbolinks:load', ()=> {
   const buildFileField = (index)=> {
-    const html = `<label data_index="${index}" id="drop-area${index}" class="none">
+    const html = `<label data_index="${index}" id="drop-area${index}" class="box none">
                     <input class="drop-file-area" type="file" multiple="true"
                     name="product[images][]"
                     id="product_images_attributes_${index}_src"><br>
@@ -79,9 +89,28 @@ $(document).on('turbolinks:load', ()=> {
     $(".active").removeClass("active");
     $("#drop-area"+input_name).addClass("active")
   });
-
 });
 
+
+
+$(function(){
+  $('#image-box').on('change', function(e) {
+    var w =$(".box").width()
+    console.log(w)
+    if (w == 620){
+      $(".box").css("display","none")
+    }
+  })
+})
+// $(function(){
+//   $("#image-box").each(function () {
+//     var num = $(this).find('#have-items li').length;
+//     console.log(num)
+//     if(num == 4){
+//       $('#drop-area').css('display','none');
+//     }
+//   });
+// });
 
 
 
