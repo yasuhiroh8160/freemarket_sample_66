@@ -18,7 +18,6 @@ $(document).on('turbolinks:load', ()=> {
   //ファイル選択時に画像を表示する。
   $(function(){
     $('#image-box').on('change', function (e) {
-      console.log(this)
       var reader = new FileReader();
       reader.onload = function (e) {
         $("#preview").attr('src', e.target.result);
@@ -49,7 +48,6 @@ $(document).on('turbolinks:load', ()=> {
   $('#image-box').on('change', '.drop-file-area', function(e) {
     $('#have-items').append(buildImage(fileIndex[0]));
     var input_name = (fileIndex[0])
-    console.log(input_name)
     fileIndex.shift();
     fileIndex.push(fileIndex[fileIndex.length - 1] + 1)
     $("#picture"+input_name).addClass("pic")
@@ -94,7 +92,6 @@ $(document).on('turbolinks:load', ()=> {
 
 $(document).on('turbolinks:load', function() {
   $(function(){
-    // カテゴリーセレクトボックスのオプションを作成
     function appendOption(category){
       var html = `<option value="${category.id}" data-category="${category.id}">${category.name}</option>`;
       return html;
@@ -127,8 +124,8 @@ $(document).on('turbolinks:load', function() {
     }
     // 親カテゴリー選択のイベント
     $('#parent_category').on('change', function(){
-      var parentCategory = $('option:selected',this).val(); //選択された親カテゴリーの名前を取得
-      if (parentCategory != "---"){ //親カテゴリーが初期値でないことを確認
+      var parentCategory = $('option:selected',this).val();
+      if (parentCategory != "---"){
         $.ajax({
           url: '/product/get_category_children',
           type: 'GET',
@@ -136,7 +133,7 @@ $(document).on('turbolinks:load', function() {
           dataType: 'json'
         })
         .done(function(children){
-          $('#category-child').remove(); //親が変更された時、子以下を削除する
+          $('#category-child').remove();
           $('#category-grand-child').remove();
           var insertHTML = '';
           children.forEach(function(child){
@@ -149,7 +146,7 @@ $(document).on('turbolinks:load', function() {
           alert('カテゴリー取得に失敗しました');
         })
       }else{
-        $('#category-child').remove(); //親が変更された時、子以下を削除する
+        $('#category-child').remove();
         $('#category-grand-child').remove();
         $('#size').remove();
         $('#brand').remove();
@@ -157,8 +154,8 @@ $(document).on('turbolinks:load', function() {
     });
     // 子カテゴリー選択後のイベント
     $('#category').on('change', "#child_category",function(){
-      var childId = $('option:selected',this).val();; //選択された子カテゴリーのidを取得
-      if (childId != "---"){ //子カテゴリーが初期値でないことを確認
+      var childId = $('option:selected',this).val();;
+      if (childId != "---"){
         $.ajax({
           url: '/product/get_category_grandchildren',
           type: 'GET',
@@ -167,7 +164,7 @@ $(document).on('turbolinks:load', function() {
         })
         .done(function(grandchildren){
           if (grandchildren.length != 0) {
-            $('#category-grand-child').remove(); //子が変更された時、孫以下を削除する
+            $('#category-grand-child').remove();
             var insertHTML = '';
             grandchildren.forEach(function(grandchild){
               insertHTML += appendOption(grandchild);
@@ -195,7 +192,6 @@ $(document).on('turbolinks:load', function() {
 
   
   $(function(){
-    // カテゴリーセレクトボックスのオプションを作成
     function appendOption(delivery){
       var html = `<option value="${delivery.id}" data-category="${delivery.id}">${delivery.name}</option>`;
       return html;
@@ -220,9 +216,8 @@ $(document).on('turbolinks:load', function() {
     }
   
     $('#delivery').on('change', function(){
-      var delivery = $('option:selected',this).val(); //選択された親カテゴリーの名前を取得
-      console.log(delivery)
-      if (delivery == "1"){ //親カテゴリーが初期値でないことを確認
+      var delivery = $('option:selected',this).val();
+      if (delivery == "1"){
         $.ajax({
           url: '/product/get_shipping_PayFormer',
           type: 'GET',
@@ -230,7 +225,7 @@ $(document).on('turbolinks:load', function() {
           dataType: 'json'
         })
         .done(function(deliveries){
-          $('#delivery-child').remove(); //親が変更された時、子以下を削除する
+          $('#delivery-child').remove()
           var insertHTML = '';
           deliveries.forEach(function(delivery){
             
@@ -249,7 +244,7 @@ $(document).on('turbolinks:load', function() {
           dataType: 'json'
         })
         .done(function(deliveries){
-          $('#delivery-child').remove(); //親が変更された時、子以下を削除する
+          $('#delivery-child').remove();
           var insertHTML = '';
           deliveries.forEach(function(delivery){
             
@@ -262,7 +257,7 @@ $(document).on('turbolinks:load', function() {
         })
       }
       else{
-        $('#delivery-child').remove(); //親が変更された時、子以下を削除する
+        $('#delivery-child').remove();
       }
     });
   })
