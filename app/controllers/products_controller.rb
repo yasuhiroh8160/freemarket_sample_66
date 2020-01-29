@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:buy_confirm]
+
   require 'payjp'
 
   def index
@@ -74,16 +76,12 @@ class ProductsController < ApplicationController
     @product.save!
   end
 
-  private
-  def create_params
-    params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id, images: [])
-  end
-
-
-
   def buy_confirm
     @product = Product.new
     @product = Product.find_by(id: params[:format])
+    # @current_user = User.find_by(id: session[:user_id])
+    # @user = User.find_by(id: session[:user_id])
+    # @current_user = User.find(1)
   end
 
   def purchase
@@ -102,5 +100,10 @@ class ProductsController < ApplicationController
   def done
   end
 
+
+  private
+  def create_params
+    params.require(:product).permit(:name, :description, :condition_id, :term_id, :delivery_id, :shipping_id, :category_id, :fromprefecture_id, :price, :size_id, :brand_id, images: [])
+  end
   
 end

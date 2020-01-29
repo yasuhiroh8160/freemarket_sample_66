@@ -68,11 +68,14 @@
 
           .paying-contents__paying-delivery__paying-address
             %p
-              〒000-0000
+              〒
+              = current_user.address.zipcode
               %br
-              xxxxxxxxxxxxxxxxxxx
+              = current_user.address.prefecture
+              = current_user.address.city
               %br
-              なまえ
+              = current_user.last_name
+              = current_user.first_name
 
         .paying-contents__paying-button
           %button{disabled: "", type: "submit", class: 'gray-button'} 購入する
