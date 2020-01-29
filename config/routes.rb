@@ -14,8 +14,6 @@ Rails.application.routes.draw do
 
 
   root to: 'products#index'
-  get '/new', to: 'products#new'
-  post '/products', to: 'products#create'
   resources :products, only: [:index, :show, :new, :create] do
     collection do
       get 'get_category_children', defaults: { format: 'json' }

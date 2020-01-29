@@ -85,6 +85,9 @@ $(document).on('turbolinks:load', ()=> {
 
 
 
+
+
+
 $(document).on('turbolinks:load', function() {
   $(function(){
     function appendOption(category){
@@ -122,7 +125,7 @@ $(document).on('turbolinks:load', function() {
       var parentCategory = $('option:selected',this).val();
       if (parentCategory != "---"){
         $.ajax({
-          url: '/product/get_category_children',
+          url: '/products/get_category_children',
           type: 'GET',
           data: { parent_id: parentCategory },
           dataType: 'json'
@@ -152,7 +155,7 @@ $(document).on('turbolinks:load', function() {
       var childId = $('option:selected',this).val();;
       if (childId != "---"){
         $.ajax({
-          url: '/product/get_category_grandchildren',
+          url: '/products/get_category_grandchildren',
           type: 'GET',
           data: { child_id: childId },
           dataType: 'json'
@@ -214,7 +217,7 @@ $(document).on('turbolinks:load', function() {
       var delivery = $('option:selected',this).val();
       if (delivery == "1"){
         $.ajax({
-          url: '/product/get_shipping_PayFormer',
+          url: '/products/get_shipping_PayFormer',
           type: 'GET',
           data: { delivery_id: delivery },
           dataType: 'json'
@@ -233,7 +236,7 @@ $(document).on('turbolinks:load', function() {
         })
       }else if (delivery == "2") {
         $.ajax({
-          url: '/product/get_shipping_PayGuest',
+          url: '/products/get_shipping_PayGuest',
           type: 'GET',
           data: { delivery_id: delivery },
           dataType: 'json'
