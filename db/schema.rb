@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_24_072533) do
+ActiveRecord::Schema.define(version: 2020_01_28_033020) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -142,9 +142,6 @@ ActiveRecord::Schema.define(version: 2020_01_24_072533) do
     t.string "first_name", null: false
     t.string "last_name_kana", null: false
     t.string "first_name_kana", null: false
-    t.string "birth_year", null: false
-    t.string "birth_month", null: false
-    t.string "birth_day", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -152,8 +149,7 @@ ActiveRecord::Schema.define(version: 2020_01_24_072533) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.date "birthday"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
