@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   before_action :redirect_root, only: [:buy_confirm]
-  before_action :set_product, only: [:show, :edit, :update , :purchase]
+  before_action :set_product, only: [:show, :edit, :update, :purchase, :destroy]
 
   require 'payjp'
 
@@ -82,11 +82,17 @@ class ProductsController < ApplicationController
 
   def update
     if @product.update(create_params)
-      redirect_to root_path
+      render "update"
     else
       render "edit"
     end
   end
+
+  def destroy
+    @product.destroy
+    render "delete"
+  end
+  
 
   def buy_confirm
     @product = Product.find(params[:format])
