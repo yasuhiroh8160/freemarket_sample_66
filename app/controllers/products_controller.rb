@@ -89,8 +89,11 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product.destroy
-    render "delete"
+    if @product.destroy
+      render "delete"
+    else
+      redirect_to product_path
+    end
   end
   
 
