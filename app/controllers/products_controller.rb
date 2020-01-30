@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   before_action :redirect_root, only: [:buy_confirm]
-  before_action :set_product, only: [:show, :edit, :update]
+  before_action :set_product, only: [:show, :edit, :update , :purchase]
 
   require 'payjp'
 
@@ -94,7 +94,6 @@ class ProductsController < ApplicationController
 
   def purchase
     Payjp.api_key = ENV['PAYJP_ACCESS_KEY']
-    @product = Product.find(params[:id])
     Payjp::Charge.create(
       amount: @product.price,
       card: params['payjp-token'],
