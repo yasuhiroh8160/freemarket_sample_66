@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
   before_action :redirect_root, only: [:buy_confirm]
-  before_action :set_product, only: [:show, :edit, :update, :buy_confirm, :purchase]
+  before_action :set_product, only: [:show, :edit, :update]
 
   require 'payjp'
 
