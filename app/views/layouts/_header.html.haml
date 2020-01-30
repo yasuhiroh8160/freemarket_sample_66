@@ -27,10 +27,25 @@
       .l-right
         %ul.login-nav
           - if user_signed_in?
-            -# = "#{current_user.nickname}でログイン中"
-            %li.login-nav__log-in
-              = link_to destroy_user_session_path, method: :delete do
-                %span ログアウト
+            %li.login_menu
+              = link_to root_path, class:"user_icons" do
+                %i.far.fa-heart
+                %span いいね一覧
+            %li.login_menu
+              = link_to root_path, class:"user_icons" do
+                %i.far.fa-bell
+                %span お知らせ
+            %li.login_menu
+              = link_to root_path, class:"user_icons" do
+                %i.fas.fa-check
+                %span やることリスト
+            %li.login_menu
+              = link_to mypage_path, class:"user_icons" do
+                %i.fas.fa-user-circle
+                %span マイページ
+
+              -# = link_to destroy_user_session_path, method: :delete do
+              -#   %span ログアウト
           - else
             %li.login-nav__sign-up
               =link_to "signup" do

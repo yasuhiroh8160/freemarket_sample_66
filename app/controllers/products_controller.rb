@@ -2,13 +2,13 @@ class ProductsController < ApplicationController
 
   before_action :redirect_root, only: [:buy_confirm]
   before_action :set_product, only: [:show, :edit, :update, :purchase, :destroy]
+  before_action :set_select, only: [:index, :show]
 
   require 'payjp'
 
   def index
     @product = Product.all
-    @parents = Category.all.order("id ASC").limit(14)
-    @brands = Brand.all.order("id ASC").limit(8)
+
 
     #レディース
     nums_ladies = Category.where(ancestry: '1/15').or(Category.where(ancestry: '1/16')).or(Category.where(ancestry: '1/17')).or(Category.where(ancestry: '1/18')).or(Category.where(ancestry: '1/19')).or(Category.where(ancestry: '1/20')).ids
@@ -47,6 +47,7 @@ class ProductsController < ApplicationController
   def show
     @other_brands = Product.where(brand_id: @product.brand_id).where.not(id: @product.id)
     @other_myproducts = Product.where(user_id: @product.user_id).where.not(id: @product.id)
+
   end
 
   def new
@@ -123,6 +124,11 @@ class ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+  end
+
+  def set_select
+    @parents = Category.all.order("id ASC").limit(14)
+    @brands = Brand.all.order("id ASC").limit(8)
   end
   
   def redirect_root

@@ -307,6 +307,38 @@
         .login-nav{
           display: flex;
           line-height: 30px;
+
+          li.login_menu{
+            height: 44px;
+            padding: 0 14px;
+            line-height: 40px;
+            .user_icons{
+              height: 100%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              
+              &:hover{
+                i , span{
+                  color: $lightblue;
+                  transition: 0.3s ease-out 0s;
+                }
+              }
+              i{
+                margin-right: 10px;
+                font-size: 25px;
+                color: $gray;
+              }
+              span{
+                font-size: 14px;
+                color: $black;
+              }
+            }
+          }
+
+
+
+
           &__sign-up{
 
             a{
