@@ -88,8 +88,8 @@ $(document).on('turbolinks:load', ()=> {
     fileIndex.push(fileIndex[fileIndex.length - 1] + 1)
     $(".active").removeClass("active");
     $("#drop-area"+input_name).addClass("active")
-    var w =$(".box").width()
-    if (w == 620){
+    var ulw =$("#have-items").width()
+    if (ulw == 625){
       $(".box").css("display","none")
     }
   });

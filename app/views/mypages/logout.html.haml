@@ -17,7 +17,7 @@
     .main-contents__right-box
       .main-contents__right-box__right-inner
         .main-contents__right-box__right-inner__right-logout
-          = link_to "#", class: "link-logout" do
+          = link_to destroy_user_session_path, method: :delete, class: "link-logout" do
             ログアウト
 
 
