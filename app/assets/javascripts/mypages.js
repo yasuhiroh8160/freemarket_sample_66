@@ -1,4 +1,4 @@
-$(window).load(function(){
+$(document).on('turbolinks:load', ()=> {
   $(function(){
     $(".menu").click( tabClicked );
     
@@ -24,7 +24,6 @@ $(window).load(function(){
       $(id_name).addClass("show");
     }
   })
-
 });  
 
 
